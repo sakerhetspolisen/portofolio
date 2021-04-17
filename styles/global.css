@@ -16,6 +16,7 @@ body {
   font-size: 18px;
   overflow: auto;
   background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 * {
