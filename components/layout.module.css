@@ -1,0 +1,42 @@
+.container {
+  opacity: 1;
+}
+
+.headerLogo {
+  height: 34px;
+  width: 130px;
+  margin: 10px;
+  display: inline-block;
+  position: relative;
+}
+
+.header {
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: auto;
+  z-index: 1;
+}
+
+.nav {
+  float: right;
+  display: block;
+}
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+.nav ul li {
+  margin: 5px;
+  padding: 10px;
+  display: inline-block;
+}
+.nav ul li a {
+  color: var(--text-color);
+  mix-blend-mode: difference;
+  text-decoration: none;
+}

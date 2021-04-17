@@ -1,0 +1,7 @@
+.section {
+    height: 100vh;
+    overflow: auto;
+    position: relative;
+    max-width: none;
+    padding: 0;
+}

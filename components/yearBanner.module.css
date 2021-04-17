@@ -1,0 +1,17 @@
+.section {
+    height: 44vw;
+    overflow: hidden;
+    position: relative;
+}
+
+.year {
+    font-size: 55vw;
+    font-weight: 800;
+    letter-spacing: -3vw;
+    margin: 0;
+    line-height: 0.8;
+    padding: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}

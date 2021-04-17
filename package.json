@@ -8,8 +8,21 @@
     "start": "next start"
   },
   "dependencies": {
+    "@apollo/client": "^3.3.15",
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/react-fontawesome": "^0.1.14",
+    "bootstrap": "^4.6.0",
+    "graphql": "^15.5.0",
     "next": "^10.0.0",
+    "next-optimized-images": "^2.6.2",
     "react": "17.0.1",
+    "react-bootstrap": "^1.5.2",
     "react-dom": "17.0.1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "postcss": "^8.2.10",
+    "webp-loader": "^0.6.0"
   }
 }
