@@ -4,4 +4,5 @@
     position: relative;
     max-width: none;
     padding: 0;
+    pointer-events: none;
 }

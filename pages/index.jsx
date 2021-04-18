@@ -1,13 +1,12 @@
 import Head from "next/head";
 import Layout from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { Col, Row } from "react-bootstrap";
 import FullScreenBanner from "../components/fullScreenBanner";
 import YearBanner from "../components/yearBanner";
 import Event from "../components/event";
 import EventWithImages from "../components/eventWithImages";
+import CanvasBackground from "../components/canvasBackground";
 
 export default function Home() {
   return (
@@ -15,6 +14,7 @@ export default function Home() {
       <Head>
         <title>Karl Sellergren</title>
       </Head>
+      <CanvasBackground/>
       <FullScreenBanner>
         <Row
           style={{
@@ -31,29 +31,22 @@ export default function Home() {
               18-year old full-stack developer crafting digital products since
               2017.
             </h1>
-            <a
-              href="#2018"
-              style={{
-                padding: "15px",
-              }}
-            >
-              Check out my career
-              <FontAwesomeIcon icon={faArrowDown} />
-            </a>
+            <p style={{margin: "15px 0"}}>Welcome to my portfolio! Feel free to scroll through my career below, or check out my projects.</p>
           </Col>
         </Row>
       </FullScreenBanner>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+      <script src="https://cdn.spline.design/lib/anime.min.js"></script>
+      <script src="/spline.runtime.min.js"></script>
+      <script src="/main.js"></script>
       <YearBanner year={2021}>
-      <Event
+        <Event
           title="Started working as a programming teacher at Procivitas."
           month="April"
           width="7"
           displacement="3"
         />
-      <Event
-          title="Interviewed at Imperial College London."
-          month="March"
-        />
+        <Event title="Interviewed at Imperial College London." month="March" />
       </YearBanner>
       <YearBanner year={2020}>
         <Event
@@ -107,7 +100,7 @@ export default function Home() {
           title="Started freelancing in frontend development"
           month="December"
           summary="I spent the whole year preparing for my studies at Procivitas high school STEM programme. During the first two years I gained an understanding of Classical and Modern Physics, Mathematics on a higher level, algorithm design and programming in Python."
-          images={["revenuir.png","sccoStudio.png","partikular.png"]}
+          images={["revenuir.png", "sccoStudio.png", "partikular.png"]}
         />
         <Event
           title="Started at Procivitas"
@@ -122,7 +115,7 @@ export default function Home() {
           title="Återsälj"
           month="April"
           summary="In April I founded Återsälj, a Swedish marketplace optimized for high-end clothing, ensuring that sellers and buyers make secure deals. I developed the website using basic concepts and was later responsible for marketing."
-          images={["atersalj1.png","atersalj2.png"]}
+          images={["atersalj1.png", "atersalj2.png"]}
         />
       </YearBanner>
     </Layout>
