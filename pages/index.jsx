@@ -8,6 +8,8 @@ import Event from "../components/event";
 import EventWithImages from "../components/eventWithImages";
 import CanvasBackground from "../components/canvasBackground";
 
+// https://uigradients.com/#WeddingDayBlues
+
 export default function Home() {
   return (
     <Layout home>
@@ -112,7 +114,7 @@ export default function Home() {
       </YearBanner>
       <YearBanner year={2017}>
         <EventWithImages
-          title="Återsälj"
+          title="Founded Återsälj"
           month="April"
           summary="In April I founded Återsälj, a Swedish marketplace optimized for high-end clothing, ensuring that sellers and buyers make secure deals. I developed the website using basic concepts and was later responsible for marketing."
           images={["atersalj1.png", "atersalj2.png"]}
