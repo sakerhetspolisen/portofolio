@@ -24,7 +24,8 @@ const CanvasBackground = () => {
   );
   return (
     <div
-      id="container"
+      id="game"
+      class="game"
       style={{
         width: "100%",
         height: "100vh",
@@ -36,14 +37,7 @@ const CanvasBackground = () => {
         ...backgroundStyle,
       }}
     >
-      <canvas
-        id="canvas3d"
-        style={{
-          width: "100%",
-          height: "100%",
-          outline: "none",
-        }}
-      ></canvas>
+      <canvas></canvas>
     </div>
   );
 };

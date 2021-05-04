@@ -17,6 +17,13 @@ body {
   overflow: auto;
   background-color: var(--background-color);
   color: var(--text-color);
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+ /* Hide scrollbar for Chrome, Safari and Opera */
+ body::-webkit-scrollbar {
+  display: none;
 }
 
 * {

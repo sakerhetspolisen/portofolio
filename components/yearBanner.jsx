@@ -1,5 +1,5 @@
 import { Container, Row } from "react-bootstrap";
-import styles from "./yearBanner.module.css";
+import styles from "../styles/yearBanner.module.css";
 
 export default function FullScreenBanner({ year, children }) {
   return (

@@ -1,0 +1,41 @@
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#gameBoard {
+	position: relative;
+	margin: auto;
+}
+
+.block {
+	position: absolute;
+}
+
+#gameOver {
+	text-align: center;
+	height: 100%;
+	flex-direction: column;
+	display: flex;
+	justify-content: space-around;
+}
+
+#score {
+	position: relative;
+	top: 105%;
+	text-align: center;
+	font-weight: bold;
+}
+
+#gameOverText {
+	color: #ca0000;
+	font-weight: bold;
+	text-decoration-line: underline;
+}
+
+#pressSpaceText {
+	color: #2e7ecb;
+	font-weight: bold;
+}

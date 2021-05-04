@@ -6,7 +6,7 @@ import FullScreenBanner from "../components/fullScreenBanner";
 import YearBanner from "../components/yearBanner";
 import Event from "../components/event";
 import EventWithImages from "../components/eventWithImages";
-import CanvasBackground from "../components/canvasBackground";
+import SnakeGame from "../components/snakeGame";
 
 // https://uigradients.com/#WeddingDayBlues
 
@@ -16,7 +16,7 @@ export default function Home() {
       <Head>
         <title>Karl Sellergren</title>
       </Head>
-      <CanvasBackground/>
+      <SnakeGame/>
       <FullScreenBanner>
         <Row
           style={{
@@ -37,10 +37,6 @@ export default function Home() {
           </Col>
         </Row>
       </FullScreenBanner>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-      <script src="https://cdn.spline.design/lib/anime.min.js"></script>
-      <script src="/spline.runtime.min.js"></script>
-      <script src="/main.js"></script>
       <YearBanner year={2021}>
         <Event
           title="Started working as a programming teacher at Procivitas."

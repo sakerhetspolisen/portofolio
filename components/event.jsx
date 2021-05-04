@@ -1,5 +1,5 @@
 import { Col, Row } from "react-bootstrap";
-import styles from "./event.module.css";
+import styles from "../styles/event.module.css";
 import utilStyles from "../styles/utils.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";

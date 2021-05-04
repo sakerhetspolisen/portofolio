@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./layout.module.css";
+import styles from "../styles/layout.module.css";
 import Link from "next/link";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Col, Container, Row } from "react-bootstrap";
