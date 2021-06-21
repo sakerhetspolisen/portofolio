@@ -17,7 +17,7 @@
   left: 0;
   width: 100%;
   overflow: auto;
-  z-index: 1;
+  z-index: 1000;
 }
 
 .nav {
@@ -39,4 +39,12 @@
   color: var(--text-color);
   mix-blend-mode: difference;
   text-decoration: none;
+}
+
+.footer {
+  position: relative;
+  height: 100vh;
+}
+.footerTitle h4 {
+  font-size: 50px;
 }

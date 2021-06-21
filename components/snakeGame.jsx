@@ -11,9 +11,10 @@ class SnakeGame extends React.Component {
     this.state = {
       width: 0,
       height: 0,
+      appleheight: 0,
       blockWidth: 0,
       blockHeight: 0,
-      gameLoopTimeout: 50,
+      gameLoopTimeout: 70,
       timeoutId: 0,
       startSnakeSize: 0,
       snake: [],
@@ -21,8 +22,6 @@ class SnakeGame extends React.Component {
       direction: "right",
       directionChanged: false,
       isGameOver: false,
-      snakeColor: this.props.snakeColor || this.getRandomColor(),
-      appleColor: this.props.appleColor || this.getRandomColor(),
       score: 0,
     };
   }
@@ -35,8 +34,9 @@ class SnakeGame extends React.Component {
 
   initGame() {
     // Game size initialization
-    let width = window.innerWidth;
-    let height = window.innerHeight;
+    let width = Math.floor(window.innerWidth / 20) * 20;
+    let height = Math.floor(window.innerHeight / 20) * 20;
+    let appleheight = Math.floor(((window.innerHeight / 100)*90)/20)*20;
     let blockWidth = 20;
     let blockHeight = 20;
 
@@ -58,17 +58,18 @@ class SnakeGame extends React.Component {
       Math.floor(Math.random() * ((width - blockWidth) / blockWidth + 1)) *
       blockWidth;
     let appleYpos =
-      Math.floor(Math.random() * ((height - blockHeight) / blockHeight + 1)) *
+      Math.floor(Math.random() * ((appleheight - blockHeight) / blockHeight + 1)) *
       blockHeight;
     while (appleYpos === snake[0].Ypos) {
       appleYpos =
-        Math.floor(Math.random() * ((height - blockHeight) / blockHeight + 1)) *
+        Math.floor(Math.random() * ((appleheight - blockHeight) / blockHeight + 1)) *
         blockHeight;
     }
 
     this.setState({
       width,
       height,
+      appleheight,
       blockWidth,
       blockHeight,
       startSnakeSize,
@@ -100,6 +101,7 @@ class SnakeGame extends React.Component {
   resetGame() {
     let width = this.state.width;
     let height = this.state.height;
+    let appleheight = this.state.appleheight
     let blockWidth = this.state.blockWidth;
     let blockHeight = this.state.blockHeight;
     let apple = this.state.apple;
@@ -121,14 +123,14 @@ class SnakeGame extends React.Component {
       Math.floor(Math.random() * ((width - blockWidth) / blockWidth + 1)) *
       blockWidth;
     apple.Ypos =
-      Math.floor(Math.random() * ((height - blockHeight) / blockHeight + 1)) *
+      Math.floor(Math.random() * ((appleheight - blockHeight) / blockHeight + 1)) *
       blockHeight;
     while (this.isAppleOnSnake(apple.Xpos, apple.Ypos)) {
       apple.Xpos =
         Math.floor(Math.random() * ((width - blockWidth) / blockWidth + 1)) *
         blockWidth;
       apple.Ypos =
-        Math.floor(Math.random() * ((height - blockHeight) / blockHeight + 1)) *
+        Math.floor(Math.random() * ((appleheight - blockHeight) / blockHeight + 1)) *
         blockHeight;
     }
 
@@ -139,17 +141,8 @@ class SnakeGame extends React.Component {
       directionChanged: false,
       isGameOver: false,
       gameLoopTimeout: 50,
-      snakeColor: this.getRandomColor(),
-      appleColor: this.getRandomColor(),
       score: 0,
     });
-  }
-
-  getRandomColor() {
-    let hexa = "0123456789ABCDEF";
-    let color = "#";
-    for (let i = 0; i < 6; i++) color += hexa[Math.floor(Math.random() * 16)];
-    return color;
   }
 
   moveSnake() {
@@ -178,6 +171,7 @@ class SnakeGame extends React.Component {
     if (snake[0].Xpos === apple.Xpos && snake[0].Ypos === apple.Ypos) {
       let width = this.state.width;
       let height = this.state.height;
+      let appleheight = this.state.appleheight;
       let blockWidth = this.state.blockWidth;
       let blockHeight = this.state.blockHeight;
       let newTail = { Xpos: apple.Xpos, Ypos: apple.Ypos };
@@ -191,7 +185,7 @@ class SnakeGame extends React.Component {
         Math.floor(Math.random() * ((width - blockWidth) / blockWidth + 1)) *
         blockWidth;
       apple.Ypos =
-        Math.floor(Math.random() * ((height - blockHeight) / blockHeight + 1)) *
+        Math.floor(Math.random() * ((appleheight - blockHeight) / blockHeight + 1)) *
         blockHeight;
       while (this.isAppleOnSnake(apple.Xpos, apple.Ypos)) {
         apple.Xpos =
@@ -199,9 +193,11 @@ class SnakeGame extends React.Component {
           blockWidth;
         apple.Ypos =
           Math.floor(
-            Math.random() * ((height - blockHeight) / blockHeight + 1)
+            Math.random() * ((appleheight - blockHeight) / blockHeight + 1)
           ) * blockHeight;
       }
+
+      this.animateHead();
 
       // decrease the game loop timeout
       if (gameLoopTimeout > 25) gameLoopTimeout -= 0.5;
@@ -213,6 +209,17 @@ class SnakeGame extends React.Component {
         gameLoopTimeout,
       });
     }
+  }
+
+  animateHead() {
+    let head = document.getElementById("snakeHead");
+    head.classList.remove("animate");
+    head.classList.add("animate");
+    setTimeout(function () {
+      if (head) {
+        head.classList.remove("animate");
+      }
+    }, 1000);
   }
 
   tryToEatSnake() {
@@ -351,43 +358,42 @@ class SnakeGame extends React.Component {
 
     return (
       <div className={styles.container}>
-          <div
-        id={styles.gameBoard}
-        style={{
-          width: this.state.width,
-          height: this.state.height
-        }}
-      >
-        {this.state.snake.map((snakePart, index) => {
-          return (
-            <div
-              key={index}
-              className={styles.block}
-              style={{
-                width: this.state.blockWidth,
-                height: this.state.blockHeight,
-                left: snakePart.Xpos,
-                top: snakePart.Ypos,
-                background: this.state.snakeColor,
-              }}
-            />
-          );
-        })}
         <div
-          className={styles.block}
+          id={styles.gameBoard}
           style={{
-            width: this.state.blockWidth,
-            height: this.state.blockHeight,
-            left: this.state.apple.Xpos,
-            top: this.state.apple.Ypos,
-            background: this.state.appleColor,
+            width: this.state.width,
+            height: this.state.height,
           }}
-        />
-        <div id={styles.score} style={{ fontSize: this.state.width / 20 }}>
-          SCORE:{" "}
-          {this.state.score}
+        >
+          {this.state.snake.map((snakePart, index) => {
+              return (
+                <div
+                  key={index}
+                  className={styles.snakeBlock}
+                  id={`${index == 0 ? 'snakeHead' : ''}`}
+                  style={{
+                    width: this.state.blockWidth,
+                    height: this.state.blockHeight,
+                    left: snakePart.Xpos,
+                    top: snakePart.Ypos,
+                  }}
+                />
+              );
+          })}
+          <div
+            className={styles.appleBlock}
+            style={{
+              width: this.state.blockWidth,
+              height: this.state.blockHeight,
+              left: this.state.apple.Xpos,
+              top: this.state.apple.Ypos,
+            }}
+          />
+          <div id={styles.score}>
+            You have eaten {this.state.score}
+            <div id={styles.exampleApple}></div>
+          </div>
         </div>
-      </div>
       </div>
     );
   }

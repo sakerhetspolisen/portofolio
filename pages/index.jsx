@@ -8,8 +8,6 @@ import Event from "../components/event";
 import EventWithImages from "../components/eventWithImages";
 import SnakeGame from "../components/snakeGame";
 
-// https://uigradients.com/#WeddingDayBlues
-
 export default function Home() {
   return (
     <Layout home>
@@ -38,6 +36,12 @@ export default function Home() {
         </Row>
       </FullScreenBanner>
       <YearBanner year={2021}>
+        <EventWithImages
+          title="Founded my sole propriotorship"
+          month="May"
+          summary='I was the team-lead of the project "Give a Bag, Get a Test" which won 6th place in the nationwide, state-organized competition Hack The Crisis. Over 5000 participants took part in the competition, and our category had over 120 teams that competed against us. We landed at 6th place and were the only team containing solely of High school students in our category.'
+          images={[]}
+        />
         <Event
           title="Started working as a programming teacher at Procivitas."
           month="April"

@@ -1,8 +1,8 @@
 import Image from "next/image";
 import styles from "../styles/layout.module.css";
 import Link from "next/link";
+import Footer from "./footer.jsx"
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Col, Container, Row } from "react-bootstrap";
 
 export default function Layout({ children, home }) {
   return (
@@ -54,20 +54,7 @@ export default function Layout({ children, home }) {
         </nav>
       </header>
       <main>{children}</main>
-      <footer>
-        <Container>
-          <Row>
-            <Col md={8}>
-              <h4>Will code for pizza.</h4>
-            </Col>
-            <Col>
-              <ul>
-                <li>Wow</li>
-              </ul>
-            </Col>
-          </Row>
-        </Container>
-      </footer>
+      <Footer></Footer>
     </div>
   );
 }

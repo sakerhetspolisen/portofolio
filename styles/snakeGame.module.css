@@ -1,41 +1,68 @@
 .container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 #gameBoard {
-	position: relative;
-	margin: auto;
+  position: relative;
+  margin: auto;
 }
 
-.block {
-	position: absolute;
+.snakeBlock {
+  position: absolute;
+  background-image: radial-gradient(circle at top right, #20bdff, #5433ff 60%);
+  z-index: 1;
+}
+
+.appleBlock {
+  position: absolute;
+  background: yellow;
+  /*background: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);*/
+  background-color: red;
+  background-image: radial-gradient(circle at top right, #c0ffdb, #79ffb3 60%);
+  box-shadow: 0 0px 20px #79ffb3;
+  z-index: 1;
 }
 
 #gameOver {
-	text-align: center;
-	height: 100%;
-	flex-direction: column;
-	display: flex;
-	justify-content: space-around;
+  text-align: center;
+  height: 100%;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-around;
 }
 
 #score {
-	position: relative;
-	top: 105%;
-	text-align: center;
-	font-weight: bold;
+  position: absolute;
+  justify-content: center;
+  bottom: 50px;
+  right: 50px;
+  text-align: left;
+  z-index: 2;
+  font-size: 15px;
+  line-height: 0;
+  z-index: 0;
+}
+
+#exampleApple {
+  margin-left: 8px;
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  background-image: radial-gradient(circle at top right, #c0ffdb, #79ffb3 60%);
+  box-shadow: 0 0px 17px #79ffb3;
 }
 
 #gameOverText {
-	color: #ca0000;
-	font-weight: bold;
-	text-decoration-line: underline;
+  color: #ca0000;
+  font-weight: bold;
+  text-decoration-line: underline;
 }
 
 #pressSpaceText {
-	color: #2e7ecb;
-	font-weight: bold;
+  color: #2e7ecb;
+  font-weight: bold;
 }
