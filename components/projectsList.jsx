@@ -18,12 +18,10 @@ export default function ProjectsList() {
 
   const { projects: allProjects } = data;
 
-  return (
-      allProjects.map((project) => (
-          <div>
-              <p>{project.title}</p>
-              <p>{project.referrerUrl}</p>
-        </div>
-      ))
-  );
+  return allProjects.map((project) => (
+    <div>
+      <p>{project.title}</p>
+      <p>{project.referrerUrl}</p>
+    </div>
+  ));
 }
