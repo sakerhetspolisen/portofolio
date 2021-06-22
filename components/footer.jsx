@@ -74,6 +74,7 @@ const Footer = () => {
               <h5 style={{color:"white"}}>Get in touch</h5>
               <a href="https://www.linkedin.com/in/karlsellergren" style={{color:"white",display:"block",margin:"7px 0"}}>Linkedin</a>
               <a href="https://www.github.com/sakerhetspolisen" style={{color:"white",display:"block",margin:"7px 0"}}>Github</a>
+              <a href="https://www.upwork.com/freelancers/~01fb5d8636e09c5330" style={{color:"white",display:"block",margin:"7px 0"}}>Upwork</a>
               <a href="mailto:karl@seller.green" style={{color:"white",display:"block",margin:"7px 0"}}>karl@seller.green</a>
             </div>
             </Col>

@@ -27,7 +27,9 @@ export default function Work() {
           </Col>
         </Row>
       </Container>
-      <ProjectsList/>
+      <Container>
+        <ProjectsList/>
+      </Container>
     </Layout>
   );
 }
