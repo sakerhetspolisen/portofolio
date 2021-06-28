@@ -1,44 +1,75 @@
 import Head from "next/head";
 import Link from "next/link";
+import React, { useRef, useEffect } from 'react'
 import utilStyles from "../styles/utils.module.css";
 import Layout from "../components/layout";
 import styles from "../styles/work.module.css";
 import { Col, Container, Row } from "react-bootstrap";
 import ProjectsList from "../components/projectsList";
 
-export default function Work() {
+const Work = () => {
+  const gradientRef = useRef(null);
+
+  useEffect(() => {
+    const canvas = gradientRef.current;
+    const ctx = canvas.getContext("2d");
+
+    function Pixel(x, y) {
+      this.x = x;
+      this.y = y;
+      this.hue = Math.floor(Math.random() * 360);
+      var direction = Math.random() > 0.5 ? -1 : 1;
+      this.velocity = (Math.random() * 30 + 20) * 0.01 * direction;
+    }
+  
+    Pixel.prototype.update = function () {
+      this.hue += this.velocity;
+    };
+  
+    Pixel.prototype.render = function (ctx) {
+      var hue = Math.round(this.hue);
+      ctx.fillStyle = "hsl(" + hue + ", 100%, 50% )";
+      ctx.fillRect(this.x, this.y, 1, 1);
+    };
+  
+    var pixels = [
+      new Pixel(0, 0),
+      new Pixel(1, 0),
+      new Pixel(0, 1),
+      new Pixel(1, 1),
+    ];
+  
+    function animate() {
+      pixels.forEach(function (pixel) {
+        pixel.update();
+        pixel.render(ctx);
+      });
+      requestAnimationFrame(animate);
+    }
+  
+    animate();
+  }, [gradientRef]);
+
   return (
     <Layout>
       <Head>
         <title>Work - Karl Sellergren</title>
       </Head>
       <Container className={styles.container}>
+        <canvas width="2" height="2" ref={gradientRef}></canvas>
         <Row>
           <Col className={styles.overflower}>
-            <span>Past Work</span>
-            <span>Past Work</span>
-          </Col>
-        </Row>
-      </Container>
-      <Container style={{marginTop: "10vw"}}>
-        <Row>
-          <Col md={6} style={{display:"flex",alignItems:"end"}}><h1 className={utilStyles.headingXl} style={{fontSize: "8vw",margin: 0}}>Past work</h1></Col>
-          <Col md={6} style={{display:"flex",alignItems:"end"}}>
-            <p style={{margin:"0 20px 30px 0"}}>Stöldskyddsföreningen / SCCO Studio / Revenuir / Bot-attack / Elevkåren vid Procivitas / Killergame / Partikular</p>
-          </Col>
-        </Row>
-        <Row>
-          <Col md={6}>
-            <p>2018-2021</p>
-            <Link href="/">
-              <a style={{color: "black",fontWeight:"bold"}}>&#128281; to home</a>
-            </Link>
+            <span className={styles.shadows}>Latest Work</span>
+            <span className={styles.shadows}>Latest Work</span>
+            <span>L<b>a</b>te<b>s</b>t Wo<b>r</b>k</span>
           </Col>
         </Row>
       </Container>
       <Container>
-        <ProjectsList/>
+        <ProjectsList />
       </Container>
     </Layout>
   );
 }
+
+export default Work

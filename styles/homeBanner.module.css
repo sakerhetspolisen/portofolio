@@ -54,10 +54,7 @@
 }
 @keyframes flicker {
     0% {opacity: 0;}
-    22% {opacity: 0.8;}
-    28% {opacity: 1;}
-    43% {opacity: 0;}
-    48% {opacity: 0.4;}
+    48% {opacity: 0;}
     70% {opacity: 1;}
     80% {opacity: 0.2;}
     87% {opacity: 0.8;}
