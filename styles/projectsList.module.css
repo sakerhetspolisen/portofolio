@@ -1,0 +1,93 @@
+.project a {
+  color: var(--text-color);
+}
+.project {
+  min-height: 70vh;
+  position: relative;
+  margin-top: 10vh;
+}
+.wave {
+  content: "";
+  height: 40px;
+  width: calc(100vw - 90px);
+  position: relative;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  margin: 30px;
+  margin-top: 9vh;
+}
+.wave:before {
+  content: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
+  position: relative;
+  top: -90px;
+  color: rgba(0, 0, 0, 0);
+  width: calc(100% + 35px);
+  font-size: 4.6em;
+  text-decoration-style: wavy;
+  text-decoration-color: #25173a;
+  text-decoration-line: underline;
+  animation: animate 0.9s linear infinite;
+  -webkit-animation: animate 0.9s linear infinite;
+  text-decoration-color: white;
+}
+
+@keyframes animate {
+  0% {
+    left: -0px;
+  }
+  100% {
+    left: -42px;
+  }
+}
+@-webkit-keyframes animate {
+  0% {
+    left: -0px;
+  }
+  100% {
+    left: -50px;
+  }
+}
+
+.project div {
+  padding: 0;
+}
+.project .upper {
+  margin: 45px;
+}
+.project .upper h2 {
+  font-size: 5vw;
+  letter-spacing: -0.1vw;
+  line-height: 0.9;
+  margin: 0;
+}
+.project .upper p {
+  font-weight: bold;
+  font-size: 30px;
+  margin: 0;
+  opacity: 0.8;
+}
+.project .lower {
+  position: absolute;
+  bottom: 0;
+  left: auto;
+  margin: 45px;
+  max-width: 30vw;
+}
+.project .lower p {
+  margin: 0;
+  padding: 0;
+  font-size: 40px;
+  line-height: 1;
+}
+.project .lower p b {
+  font-size: 60px;
+  opacity: 0.8;
+  font-weight: normal;
+}
+.imageContainer {
+  width: calc(50vw - 90px);
+  height: calc(70vh - 90px);
+  margin: 30px;
+  position: relative;
+}

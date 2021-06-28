@@ -11,7 +11,7 @@ const Footer = () => {
       const scrollPos = window.scrollY + window.innerHeight;
       if (scrollPos > footerBottom - 400) {
         // Footer scrolled to
-        document.body.style.background = "#5433FF";
+        document.body.style.background = "#000d36";
       } else if (scrollPos < footerBottom - 400) {
         // Footer scrolled away (up)
         document.body.style.background = "#000d36";

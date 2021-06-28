@@ -140,7 +140,7 @@ class SnakeGame extends React.Component {
       direction: "right",
       directionChanged: false,
       isGameOver: false,
-      gameLoopTimeout: 50,
+      gameLoopTimeout: 80,
       score: 0,
     });
   }
