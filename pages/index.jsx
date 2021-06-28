@@ -2,7 +2,7 @@ import Head from "next/head";
 import Layout from "../components/layout";
 import utilStyles from "../styles/utils.module.css";
 import { Col, Row } from "react-bootstrap";
-import FullScreenBanner from "../components/fullScreenBanner";
+import HeroBanner from "../components/homeBanner";
 import YearBanner from "../components/yearBanner";
 import Event from "../components/event";
 import EventWithImages from "../components/eventWithImages";
@@ -15,27 +15,8 @@ export default function Home() {
         <title>Karl Sellergren</title>
       </Head>
       <SnakeGame/>
-      <FullScreenBanner>
-        <Row
-          style={{
-            position: "absolute",
-            top: "50%",
-            transform: "translateY(-50%)",
-            margin: "0 40px",
-            padding: "0",
-            display: "block",
-          }}
-        >
-          <Col>
-            <h1 className={utilStyles.heading2Xl} style={{ display: "inline" }}>
-              18-year old full-stack developer crafting digital products since
-              2017.
-            </h1>
-            <p style={{margin: "15px 0"}}>Welcome to my portfolio! Feel free to scroll through my career below, or check out my projects.</p>
-          </Col>
-        </Row>
-      </FullScreenBanner>
-      <YearBanner year={2021}>
+      <HeroBanner/>
+      <YearBanner year={200021}>
         <EventWithImages
           title="Founded my sole propriotorship"
           month="May"
@@ -50,7 +31,7 @@ export default function Home() {
         />
         <Event title="Interviewed at Imperial College London." month="March" />
       </YearBanner>
-      <YearBanner year={2020}>
+      <YearBanner year={200020}>
         <Event
           title="Became board-member of Digital Ungdom."
           month="November"
@@ -80,7 +61,7 @@ export default function Home() {
           images={[]}
         />
       </YearBanner>
-      <YearBanner year={2019}>
+      <YearBanner year={200019}>
         <EventWithImages
           title="Co-founded Partikular"
           month="December"
@@ -97,7 +78,7 @@ export default function Home() {
           displacement="2"
         />
       </YearBanner>
-      <YearBanner year={2018}>
+      <YearBanner year={200018}>
         <EventWithImages
           title="Started freelancing in frontend development"
           month="December"
@@ -112,7 +93,7 @@ export default function Home() {
           displacement="1"
         />
       </YearBanner>
-      <YearBanner year={2017}>
+      <YearBanner year={200017}>
         <EventWithImages
           title="Founded Återsälj"
           month="April"

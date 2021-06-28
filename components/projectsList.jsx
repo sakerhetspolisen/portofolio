@@ -19,7 +19,7 @@ export const ALL_PROJECTS_QUERY = gql`
 export default function ProjectsList() {
   const { loading, error, data } = useQuery(ALL_PROJECTS_QUERY);
 
-  if (error) return <div>Error loading projects.{error}</div>;
+  if (error) return <div>Error loading projects.</div>;
   if (loading) return <div>Loading</div>;
 
   const { projects: allProjects } = data;

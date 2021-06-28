@@ -1,8 +1,17 @@
 :root {
   --default-font: stolzl, -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  --text-color: #202020;
-  --background-color: #fff;
+  --text-color: rgb(228, 228, 228);
+  --text-shadow-color: rgba(228, 228, 228, 0.747);
+  --background-color: #2b2b2b;
+}
+
+@font-face {
+  font-family: 'Krisha';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Krisha'), local('Krisha'),
+       url('../public/Krisha-Regular.woff') format('woff');
 }
 
 html {

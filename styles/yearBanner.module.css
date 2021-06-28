@@ -1,36 +1,25 @@
 .section {
-    height: 44vw;
-    position: relative;
+  height: 44vw;
+  position: relative;
 }
 
 .overflowContainer {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .year {
-    font-size: 55vw;
-    font-weight: 800;
-    letter-spacing: -3vw;
-    margin: 0;
-    line-height: 0.8;
-    padding: 0;
-    position: absolute;
-    left: 50%;
-    color: black;
-    transform: translateX(-50%);
-    color: #000;
-    background: var(--background-color);
-    mix-blend-mode: multiply;
-}
-.year::before {
-    content: "";
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(to right, #5433FF 0%, #20BDFF 50%,#A5FECB 100%);
-    pointer-events: none;
-    mix-blend-mode: screen;
+  font-family: "Krisha";
+  font-size: 55vw;
+  font-weight: 800;
+  margin: 0;
+  line-height: 0.8;
+  padding: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 15px;
+  -webkit-text-stroke-color: var(--text-color);
+  text-shadow: 0 0 40px var(--text-shadow-color);
 }
