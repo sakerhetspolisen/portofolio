@@ -1,0 +1,33 @@
+.container {
+  height: 100vh;
+  overflow: hidden;
+}
+.overflower {
+    position: absolute;
+    top: 20vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    max-width: initial;
+    animation: moveup 2s;
+}
+.container span {
+  white-space: nowrap;
+  display: block;
+  font-family: "Krisha";
+  font-size: 40vw;
+  margin: 0;
+  margin-top: -20vw;
+  line-height: 1;
+  color: white;
+  background: var(--background-color);
+  position: relative;
+  background: -webkit-linear-gradient(rgb(255, 255, 255), var(--background-color) 80%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes moveup {
+    from {transform: translate(-50%,200px);opacity: 0;}
+    to {transform: translate(-50%,0);opacity: 1;}
+}

@@ -33,6 +33,9 @@ export default function Layout({ children, home }) {
             </>
           )}
         </div>
+        <div className={styles.tag}>
+          <span>Portfolio</span><b>4</b><span>2021</span>
+        </div>
         <nav className={styles.nav}>
           <ul>
             <li>

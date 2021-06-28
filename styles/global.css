@@ -45,12 +45,22 @@ body {
 }
 
 a {
-  color: #5433ff;
+  color: #20bdff;
   text-decoration: none;
+  transition: 0.2s;
 }
 
 a:hover {
+  color: #5cee8d;
   text-decoration: none;
+  transition: 0.2s;
+}
+a svg {
+  transition: 0.2s;
+}
+a:hover > svg {
+  transform: translate(5px,-5px) rotate(-25deg) scale(1.4);
+  transition: 0.2s;
 }
 
 img {

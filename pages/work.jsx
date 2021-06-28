@@ -2,8 +2,9 @@ import Head from "next/head";
 import Link from "next/link";
 import utilStyles from "../styles/utils.module.css";
 import Layout from "../components/layout";
+import styles from "../styles/work.module.css";
 import { Col, Container, Row } from "react-bootstrap";
-import ProjectsList from "../components/projectsList"
+import ProjectsList from "../components/projectsList";
 
 export default function Work() {
   return (
@@ -11,6 +12,14 @@ export default function Work() {
       <Head>
         <title>Work - Karl Sellergren</title>
       </Head>
+      <Container className={styles.container}>
+        <Row>
+          <Col className={styles.overflower}>
+            <span>Past Work</span>
+            <span>Past Work</span>
+          </Col>
+        </Row>
+      </Container>
       <Container style={{marginTop: "10vw"}}>
         <Row>
           <Col md={6} style={{display:"flex",alignItems:"end"}}><h1 className={utilStyles.headingXl} style={{fontSize: "8vw",margin: 0}}>Past work</h1></Col>
