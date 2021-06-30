@@ -1,0 +1,83 @@
+<svg fill="none" viewBox="0 0 800 400" width="800" height="400" xmlns="http://www.w3.org/2000/svg">
+	<foreignObject width="100%" height="100%">
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<style>
+				@keyframes flicker {
+                    0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+                        //text-shadow: none;
+                    opacity: .99;
+                        
+                    }
+                    20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+                        opacity: 0.4;
+                    }
+                }
+
+				.container {
+					font-family:
+						system-ui,
+						-apple-system,
+						'Segoe UI',
+						Roboto,
+						Helvetica,
+						Arial,
+						sans-serif,
+						'Apple Color Emoji',
+						'Segoe UI Emoji';
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					margin: 0;
+					width: 100%;
+					height: 400px;
+					background: #0a0a0a;
+					background-image: 
+                        repeating-linear-gradient(
+                        0deg,
+                        rgb(41, 41, 41),
+                        rgb(41, 41, 41) 5px,
+                        #0a0a0a 10px,
+                        #0a0a0a 15px /* determines size */
+                        );
+					border-radius: 10px;
+					color: white;
+					text-align: center;
+				}
+
+				h1 {
+					font-size: 4vw;
+                    font-weight: 800;
+                    margin: 1rem 0;
+                    text-transform: uppercase;
+                    letter-spacing: 0.1vw;
+                    text-align: center;
+                    -webkit-text-fill-color: transparent;
+                    -webkit-text-stroke-width: 0.1vw;
+                    -webkit-text-stroke-color: #fff;
+                    text-shadow: 0 0 10px rgba(255, 255, 255,0.6);
+                    animation: flicker 3s linear infinite;
+				}
+
+                b {
+                    color:red;
+                    -webkit-text-stroke-color: rgb(121, 255, 179);
+                    text-shadow: 0 0 10px rgba(121, 255, 179,0.6);
+                    font-weight: 800;
+                    animation: flicker 1s linear infinite;
+                }
+
+				p {
+					font-size: 12px;
+                    font-weight: 800;
+                    letter-spacing: 1px;
+					animation: 5s ease 0s normal forwards 1 fadeIn;
+				}
+			</style>
+			<div class="container">
+				<h1>18 year old <b>frontend developer</b> crafting digital products since 2017.</h1>
+                <p>PS: This is selectable text!</p>
+			</div>
+		</div>
+	</foreignObject>
+</svg>
