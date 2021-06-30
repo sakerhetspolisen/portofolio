@@ -48,11 +48,6 @@ export default function Layout({ children, home }) {
                 <a>Work</a>
               </Link>
             </li>
-            <li>
-              <Link href="/contact">
-                <a>Contact</a>
-              </Link>
-            </li>
           </ul>
         </nav>
       </header>
