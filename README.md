@@ -1,5 +1,5 @@
 <div align="center">
-<img src="thumbnail.svg">
+<img src="https://raw.githubusercontent.com/sakerhetspolisen/portofolio/master/thumbnail.svg">
   <h1><b>Portfolio</b> website <u>for</u> <i>Karl Sellergren</i>.</h1>
   <p>This is the official repo for Karl Sellergrens portfolio website.</p>
   <p><b>REST API created with <a href="https://github.com/apollographql/apollo-client">Apollo GraphQL 🚀</a>, the used React Framework is <a href="https://github.com/vercel/next.js">Next.JS</a>, website structure is made possible by <a href="https://www.npmjs.com/package/bootstrap">Bootstrap 5</a>.</b></p>
