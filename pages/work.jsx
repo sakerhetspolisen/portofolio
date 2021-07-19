@@ -5,7 +5,7 @@ import utilStyles from "../styles/utils.module.css";
 import Layout from "../components/layout";
 import styles from "../styles/work.module.css";
 import { Col, Container, Row } from "react-bootstrap";
-import ProjectsList from "../components/projectsList";
+import ProjectsList from "../components/sampleProject";
 
 const Work = () => {
   const gradientRef = useRef(null);
@@ -51,7 +51,7 @@ const Work = () => {
   }, [gradientRef]);
 
   return (
-    <Layout>
+    <Layout dark>
       <Head>
         <title>Work - Karl Sellergren</title>
       </Head>

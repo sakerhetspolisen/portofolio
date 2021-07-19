@@ -21,6 +21,16 @@
   z-index: 1000;
 }
 
+.darkHeader .headerLogo img {
+  filter: invert(0.95);
+}
+.darkHeader .tag {
+  color: rgb(0, 13, 54);
+}
+.darkHeader .nav ul li a {
+  color: rgb(0, 13, 54);
+}
+
 .tag {
   font-size: 22px;
   display: flex;

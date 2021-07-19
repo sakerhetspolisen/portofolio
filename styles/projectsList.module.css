@@ -5,48 +5,42 @@
   min-height: 70vh;
   position: relative;
   margin-top: 10vh;
-}
-.wave {
-  content: "";
-  height: 40px;
-  width: calc(100vw - 90px);
-  position: relative;
-  bottom: 0;
-  left: 0;
-  overflow: hidden;
-  margin: 30px;
-  margin-top: 9vh;
-}
-.wave:before {
-  content: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx";
-  position: relative;
-  top: -90px;
-  color: rgba(0, 0, 0, 0);
-  width: calc(100% + 35px);
-  font-size: 4.6em;
-  text-decoration-style: wavy;
-  text-decoration-color: #25173a;
-  text-decoration-line: underline;
-  animation: animate 0.9s linear infinite;
-  -webkit-animation: animate 0.9s linear infinite;
-  text-decoration-color: white;
+  font-family: 'Subjectivity', Arial, Helvetica, sans-serif;
 }
 
-@keyframes animate {
-  0% {
-    left: -0px;
-  }
-  100% {
-    left: -42px;
-  }
+.waveHolder {
+  height: 50px;
+  overflow: hidden;
+  width: calc(100% - 80px);
+  margin-left: 35px;
 }
-@-webkit-keyframes animate {
-  0% {
-    left: -0px;
-  }
-  100% {
-    left: -50px;
-  }
+
+.waveWrapper {
+  /* Clip edges, as some of the lines don't terminate nicely. */
+  overflow: hidden;
+  position: relative;
+  width: 130%;
+  height: 50px;
+  animation: roller 1s linear infinite;
+}
+
+.wave {
+  position: absolute;
+  background: radial-gradient(ellipse, transparent, transparent 6px, white 7px, white 11px, transparent 12px);
+  background-size: 36px 40px;
+  width: 100%;
+  height: 20px;
+}
+
+.wave2 {
+  top: 20px;
+  left: 18px;
+  background-position: 0px -20px;
+}
+
+@keyframes roller {
+  from {transform: translateX(-36px);}
+  to {transform: translateX(-72px);}
 }
 
 .project div {
@@ -57,13 +51,14 @@
 }
 .project .upper h2 {
   font-size: 5vw;
+  font-weight: 800;
+  font-family: 'Subjectivity', Arial, Helvetica, sans-serif;
   letter-spacing: -0.1vw;
   line-height: 0.9;
   margin: 0;
 }
 .project .upper p {
-  font-weight: bold;
-  font-size: 30px;
+  font-size: 17px;
   margin: 0;
   opacity: 0.8;
 }
@@ -77,13 +72,16 @@
 .project .lower p {
   margin: 0;
   padding: 0;
-  font-size: 40px;
+  font-size: 30px;
   line-height: 1;
+  font-weight: 600;
 }
 .project .lower p b {
   font-size: 60px;
   opacity: 0.8;
-  font-weight: normal;
+  font-weight: 600;
+  margin-top: 15px;
+  display: block;
 }
 .imageContainer {
   width: calc(50vw - 90px);

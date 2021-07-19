@@ -13,6 +13,27 @@
   src: local('Krisha'), local('Krisha'),
        url('../public/Krisha-Regular.woff') format('woff');
 }
+@font-face {
+  font-family: 'Subjectivity';
+  font-style: normal;
+  font-weight: 800;
+  src: local('Subjectivity'), local('Subjectivity'),
+       url('../public/SubjectivitySerif-Black.woff2') format('woff');
+}
+@font-face {
+  font-family: 'Subjectivity';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Subjectivity'), local('Subjectivity'),
+       url('../public/SubjectivitySerif-Bold.woff2') format('woff');
+}
+@font-face {
+  font-family: 'Subjectivity';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Subjectivity'), local('Subjectivity'),
+       url('../public/SubjectivitySerif-Medium.woff2') format('woff');
+}
 
 html {
   overscroll-behavior: none;
@@ -161,4 +182,8 @@ img {
       110% 10%;
     background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
   }
+}
+
+@media screen and (max-width: 576px) {
+  .hide-on-mobile {display: none !important;}
 }

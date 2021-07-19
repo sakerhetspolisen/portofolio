@@ -4,10 +4,10 @@ import Link from "next/link";
 import Footer from "./footer.jsx"
 import "bootstrap/dist/css/bootstrap.min.css";
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home, dark }) {
   return (
     <div className={styles.container}>
-      <header className={styles.header}>
+      <header className={dark ? `${styles.header} ${styles.darkHeader}` : styles.header} id="page-header">
         <div className={styles.headerLogo}>
           {home ? (
             <>
@@ -33,7 +33,7 @@ export default function Layout({ children, home }) {
             </>
           )}
         </div>
-        <div className={styles.tag}>
+        <div className={`${styles.tag} hide-on-mobile`}>
           <span>Portfolio</span><b>4</b><span>2021</span>
         </div>
         <nav className={styles.nav}>
