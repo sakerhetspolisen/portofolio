@@ -22,9 +22,9 @@
 }
 .overflower {
     position: absolute;
-    top: 20vw;
+    top: calc(50% + 8vw);
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%,-50%);
     width: auto;
     max-width: initial;
 }
@@ -47,6 +47,19 @@
 .container span:nth-child(2) {
   animation-delay: 0.5s;
 }
+.container span b {
+  animation: flicker 2s;
+  animation-delay: 300ms;
+}
+@keyframes flicker {
+  0% {opacity: 0;}
+  48% {opacity: 0;}
+  70% {opacity: 1;}
+  80% {opacity: 0.2;}
+  87% {opacity: 0.8;}
+  95% {opacity: 1;}
+  100% {opacity: 1;}
+}
 .shadows {
   color: white;
   background: var(--background-color);
@@ -54,7 +67,6 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 @keyframes moveup {
     from {transform: translateY(200px);opacity: 0;}
     to {transform: translateY(0);opacity: 1;}

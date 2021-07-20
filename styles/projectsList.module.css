@@ -45,8 +45,6 @@
 .project div {
   padding: 0;
 }
-.project .upper {
-}
 .project .upper h2 {
   font-size: 6vw;
   font-weight: 800;
@@ -94,7 +92,7 @@
 @media screen and (max-width: 768px) {
   .project {
     margin-left: 5vw;
-    height: 110vh;
+    height: auto;
   }
   .carouselContainer {
     margin-right: 5vw;
@@ -106,5 +104,20 @@
   .carouselImages {
     height: 65vw;
     min-height: 100px;
+  }
+  .project .upper {
+    margin-right: 30px;
+  }
+  .project .upper h2 {
+    font-size: 10vw;
+  }
+  .project .lower {
+    position: relative;
+    max-width: unset;
+    margin-right: 30px;
+  }
+  .project .lower p {
+    font-size: 6vw;
+    margin: 20px 0;
   }
 }
