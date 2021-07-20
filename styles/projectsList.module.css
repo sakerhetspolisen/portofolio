@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   margin-top: 100px;
+  margin-left: 60px;
   font-family: 'Subjectivity', Arial, Helvetica, sans-serif;
 }
 
@@ -45,7 +46,6 @@
   padding: 0;
 }
 .project .upper {
-  margin-left: 60px;
 }
 .project .upper h2 {
   font-size: 6vw;
@@ -64,7 +64,6 @@
   position: absolute;
   bottom: 0;
   left: auto;
-  margin-left: 60px;
   max-width: 30vw;
 }
 .project .lower p {
@@ -82,8 +81,30 @@
   margin-top: 15px;
 }
 .carouselContainer {
-  width: calc(50vw - 90px);
-  height: calc(70vh - 90px);
-  margin: 30px;
   position: relative;
+  margin-right: 60px;
+}
+.carouselImages {
+  height: 60vh;
+  min-height: 400px;
+  width: 100%;
+  position: relative;
+}
+
+@media screen and (max-width: 768px) {
+  .project {
+    margin-left: 5vw;
+    height: 110vh;
+  }
+  .carouselContainer {
+    margin-right: 5vw;
+  }
+  .waveHolder {
+    width: calc(100% - 10vw);
+    margin-left: 5vw;
+  }
+  .carouselImages {
+    height: 65vw;
+    min-height: 100px;
+  }
 }

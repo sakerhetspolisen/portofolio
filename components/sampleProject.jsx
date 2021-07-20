@@ -33,7 +33,9 @@ const ProjectsList = () => {
           </div>
         </Col>
         <Col md={6}>
-          <ProjectCarousel imagesAndVideosSrcList={[thumbnailUrl]}/>
+          <div className={styles.carouselContainer}>
+            <ProjectCarousel imagesAndVideosSrcList={[thumbnailUrl]} imageClass={styles.carouselImages}/>
+          </div>
         </Col>
       </Row>
       <div className={styles.waveHolder}>

@@ -4,19 +4,13 @@ import Image from "next/image";
 import styles from 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from "react-responsive-carousel";
 
-const DemoCarousel = ({ imagesAndVideosSrcList }) => {
+const DemoCarousel = ({ imagesAndVideosSrcList, imageClass }) => {
   return (
-    <Carousel autoPlay showArrows={false} showThumbs={false} showIndicators={false} showStatus={false} infiniteLoop>
+    <Carousel autoPlay showArrows={false} showThumbs={false} showStatus={false} infiniteLoop>
       {
         imagesAndVideosSrcList.map((src) => {
           return(
-            <div style={{
-              height: "60vh",
-              minHeight: 400,
-              width: "calc(100% - 60px)",
-              marginRight: 60,
-              position: "relative"
-            }}>
+            <div className={imageClass}>
               <Image
                 src={src}
                 layout="fill"
