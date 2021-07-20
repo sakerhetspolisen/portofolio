@@ -2,19 +2,20 @@
   color: var(--text-color);
 }
 .project {
-  min-height: 70vh;
   position: relative;
-  margin-top: 10vh;
+  margin: 0;
+  padding: 0;
+  margin-top: 100px;
   font-family: 'Subjectivity', Arial, Helvetica, sans-serif;
 }
 
 .waveHolder {
   height: 50px;
   overflow: hidden;
-  width: calc(100% - 80px);
-  margin-left: 35px;
+  width: calc(100% - 120px);
+  margin-left: 60px;
+  margin-top: 40px;
 }
-
 .waveWrapper {
   /* Clip edges, as some of the lines don't terminate nicely. */
   overflow: hidden;
@@ -23,7 +24,6 @@
   height: 50px;
   animation: roller 1s linear infinite;
 }
-
 .wave {
   position: absolute;
   background: radial-gradient(ellipse, transparent, transparent 6px, white 7px, white 11px, transparent 12px);
@@ -31,13 +31,11 @@
   width: 100%;
   height: 20px;
 }
-
 .wave2 {
   top: 20px;
   left: 18px;
   background-position: 0px -20px;
 }
-
 @keyframes roller {
   from {transform: translateX(-36px);}
   to {transform: translateX(-72px);}
@@ -47,10 +45,10 @@
   padding: 0;
 }
 .project .upper {
-  margin: 45px;
+  margin-left: 60px;
 }
 .project .upper h2 {
-  font-size: 5vw;
+  font-size: 6vw;
   font-weight: 800;
   font-family: 'Subjectivity', Arial, Helvetica, sans-serif;
   letter-spacing: -0.1vw;
@@ -58,7 +56,7 @@
   margin: 0;
 }
 .project .upper p {
-  font-size: 17px;
+  font-size: 1em;
   margin: 0;
   opacity: 0.8;
 }
@@ -66,24 +64,24 @@
   position: absolute;
   bottom: 0;
   left: auto;
-  margin: 45px;
+  margin-left: 60px;
   max-width: 30vw;
 }
 .project .lower p {
   margin: 0;
   padding: 0;
-  font-size: 30px;
+  font-size: 2.3vw;
   line-height: 1;
   font-weight: 600;
+  display: block;
 }
-.project .lower p b {
-  font-size: 60px;
+.project .lower p.year {
+  font-size: 3.2em;
   opacity: 0.8;
   font-weight: 600;
   margin-top: 15px;
-  display: block;
 }
-.imageContainer {
+.carouselContainer {
   width: calc(50vw - 90px);
   height: calc(70vh - 90px);
   margin: 30px;

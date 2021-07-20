@@ -65,7 +65,7 @@ const Work = () => {
           </Col>
         </Row>
       </Container>
-      <Container>
+      <Container style={{marginTop: 50, padding: 0}}>
         <ProjectsList />
       </Container>
     </Layout>
