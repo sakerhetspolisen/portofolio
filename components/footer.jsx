@@ -1,20 +1,28 @@
 import { Col, Container, Row } from "react-bootstrap";
-//import styles from "../styles/footer.module.css";
 import React, { useLayoutEffect, useRef, useState } from "react";
 import Image from "next/image";
+import { faDoorClosed } from "@fortawesome/free-solid-svg-icons";
 
-const Footer = () => {
+const Footer = ({ darkHeaderClass }) => {
   const footerRef = useRef(null);
   useLayoutEffect(() => {
     const footerBottom = document.body.scrollHeight;
+    let isDark = false;
     const onScroll = () => {
       const scrollPos = window.scrollY + window.innerHeight;
-      if (scrollPos > footerBottom - 400) {
+      if (scrollPos > footerBottom - 200) {
         // Footer scrolled to
-        document.body.style.background = "#000d36";
-      } else if (scrollPos < footerBottom - 400) {
+        document.body.style.background = "#5433ff";
+        if (document.getElementById("page-header").classList.contains(darkHeaderClass)) {
+          document.getElementById("page-header").classList.remove(darkHeaderClass);
+          isDark = true;
+        }
+      } else if (scrollPos < footerBottom - 200) {
         // Footer scrolled away (up)
         document.body.style.background = "#000d36";
+        if (isDark) {
+          document.getElementById("page-header").classList.add(darkHeaderClass);
+        }
       }
     };
     window.addEventListener("scroll", onScroll);

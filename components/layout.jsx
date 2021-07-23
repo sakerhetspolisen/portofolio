@@ -52,7 +52,7 @@ export default function Layout({ children, home, dark }) {
         </nav>
       </header>
       <main>{children}</main>
-      <Footer></Footer>
+      <Footer darkHeaderClass={styles.darkHeader}></Footer>
     </div>
   );
 }
