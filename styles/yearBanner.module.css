@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .section {
   height: 44vw;
   position: relative;
@@ -17,7 +24,9 @@
   padding: 0;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 1vw;

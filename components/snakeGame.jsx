@@ -2,6 +2,9 @@ import React from "react";
 import styles from "../styles/snakeGame.module.css";
 import GameOver from "./gameOver.jsx";
 
+// Component: SnakeGame
+// Game that can be played on home page. Uses the HTML canvas element.
+
 class SnakeGame extends React.Component {
   constructor(props) {
     super(props);
@@ -36,7 +39,7 @@ class SnakeGame extends React.Component {
     // Game size initialization
     let width = Math.floor(window.innerWidth / 20) * 20;
     let height = Math.floor(window.innerHeight / 20) * 20;
-    let appleheight = Math.floor(((window.innerHeight / 100)*90)/20)*20;
+    let appleheight = Math.floor(((window.innerHeight / 100) * 90) / 20) * 20;
     let blockWidth = 20;
     let blockHeight = 20;
 
@@ -58,12 +61,14 @@ class SnakeGame extends React.Component {
       Math.floor(Math.random() * ((width - blockWidth) / blockWidth + 1)) *
       blockWidth;
     let appleYpos =
-      Math.floor(Math.random() * ((appleheight - blockHeight) / blockHeight + 1)) *
-      blockHeight;
+      Math.floor(
+        Math.random() * ((appleheight - blockHeight) / blockHeight + 1)
+      ) * blockHeight;
     while (appleYpos === snake[0].Ypos) {
       appleYpos =
-        Math.floor(Math.random() * ((appleheight - blockHeight) / blockHeight + 1)) *
-        blockHeight;
+        Math.floor(
+          Math.random() * ((appleheight - blockHeight) / blockHeight + 1)
+        ) * blockHeight;
     }
 
     this.setState({
@@ -101,7 +106,7 @@ class SnakeGame extends React.Component {
   resetGame() {
     let width = this.state.width;
     let height = this.state.height;
-    let appleheight = this.state.appleheight
+    let appleheight = this.state.appleheight;
     let blockWidth = this.state.blockWidth;
     let blockHeight = this.state.blockHeight;
     let apple = this.state.apple;
@@ -123,15 +128,17 @@ class SnakeGame extends React.Component {
       Math.floor(Math.random() * ((width - blockWidth) / blockWidth + 1)) *
       blockWidth;
     apple.Ypos =
-      Math.floor(Math.random() * ((appleheight - blockHeight) / blockHeight + 1)) *
-      blockHeight;
+      Math.floor(
+        Math.random() * ((appleheight - blockHeight) / blockHeight + 1)
+      ) * blockHeight;
     while (this.isAppleOnSnake(apple.Xpos, apple.Ypos)) {
       apple.Xpos =
         Math.floor(Math.random() * ((width - blockWidth) / blockWidth + 1)) *
         blockWidth;
       apple.Ypos =
-        Math.floor(Math.random() * ((appleheight - blockHeight) / blockHeight + 1)) *
-        blockHeight;
+        Math.floor(
+          Math.random() * ((appleheight - blockHeight) / blockHeight + 1)
+        ) * blockHeight;
     }
 
     this.setState({
@@ -185,8 +192,9 @@ class SnakeGame extends React.Component {
         Math.floor(Math.random() * ((width - blockWidth) / blockWidth + 1)) *
         blockWidth;
       apple.Ypos =
-        Math.floor(Math.random() * ((appleheight - blockHeight) / blockHeight + 1)) *
-        blockHeight;
+        Math.floor(
+          Math.random() * ((appleheight - blockHeight) / blockHeight + 1)
+        ) * blockHeight;
       while (this.isAppleOnSnake(apple.Xpos, apple.Ypos)) {
         apple.Xpos =
           Math.floor(Math.random() * ((width - blockWidth) / blockWidth + 1)) *
@@ -366,19 +374,19 @@ class SnakeGame extends React.Component {
           }}
         >
           {this.state.snake.map((snakePart, index) => {
-              return (
-                <div
-                  key={index}
-                  className={styles.snakeBlock}
-                  id={`${index == 0 ? 'snakeHead' : ''}`}
-                  style={{
-                    width: this.state.blockWidth,
-                    height: this.state.blockHeight,
-                    left: snakePart.Xpos,
-                    top: snakePart.Ypos,
-                  }}
-                />
-              );
+            return (
+              <div
+                key={index}
+                className={styles.snakeBlock}
+                id={`${index == 0 ? "snakeHead" : ""}`}
+                style={{
+                  width: this.state.blockWidth,
+                  height: this.state.blockHeight,
+                  left: snakePart.Xpos,
+                  top: snakePart.Ypos,
+                }}
+              />
+            );
           })}
           <div
             className={styles.appleBlock}

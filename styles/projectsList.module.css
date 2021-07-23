@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .project a {
   color: var(--text-color);
 }
@@ -23,10 +30,12 @@
   position: relative;
   width: 130%;
   height: 50px;
-  animation: roller 1s linear infinite;
+  -webkit-animation: roller 1s linear infinite;
+          animation: roller 1s linear infinite;
 }
 .wave {
   position: absolute;
+  background: -o-radial-gradient(ellipse, transparent, transparent 6px, white 7px, white 11px, transparent 12px);
   background: radial-gradient(ellipse, transparent, transparent 6px, white 7px, white 11px, transparent 12px);
   background-size: 36px 40px;
   width: 100%;
@@ -37,9 +46,13 @@
   left: 18px;
   background-position: 0px -20px;
 }
+@-webkit-keyframes roller {
+  from {-webkit-transform: translateX(-36px);transform: translateX(-36px);}
+  to {-webkit-transform: translateX(-72px);transform: translateX(-72px);}
+}
 @keyframes roller {
-  from {transform: translateX(-36px);}
-  to {transform: translateX(-72px);}
+  from {-webkit-transform: translateX(-36px);transform: translateX(-36px);}
+  to {-webkit-transform: translateX(-72px);transform: translateX(-72px);}
 }
 
 .project div {

@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .container {
   position: absolute;
   top: 0;
@@ -12,6 +19,7 @@
 
 .snakeBlock {
   position: absolute;
+  background-image: -o-radial-gradient(top right, circle, #20bdff, #5433ff 60%);
   background-image: radial-gradient(circle at top right, #20bdff, #5433ff 60%);
   z-index: 1;
 }
@@ -21,22 +29,32 @@
   background: yellow;
   /*background: conic-gradient(red, yellow, lime, aqua, blue, magenta, red);*/
   background-color: red;
+  background-image: -o-radial-gradient(top right, circle, #c0ffdb, #79ffb3 60%);
   background-image: radial-gradient(circle at top right, #c0ffdb, #79ffb3 60%);
-  box-shadow: 0 0px 20px #79ffb3;
+  -webkit-box-shadow: 0 0px 20px #79ffb3;
+          box-shadow: 0 0px 20px #79ffb3;
   z-index: 1;
 }
 
 #gameOver {
   text-align: center;
   height: 100%;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 #score {
   position: absolute;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   bottom: 50px;
   right: 50px;
   text-align: left;
@@ -52,14 +70,17 @@
   height: 15px;
   display: inline-block;
   vertical-align: middle;
+  background-image: -o-radial-gradient(top right, circle, #c0ffdb, #79ffb3 60%);
   background-image: radial-gradient(circle at top right, #c0ffdb, #79ffb3 60%);
-  box-shadow: 0 0px 17px #79ffb3;
+  -webkit-box-shadow: 0 0px 17px #79ffb3;
+          box-shadow: 0 0px 17px #79ffb3;
 }
 
 #gameOverText {
   color: #ca0000;
   font-weight: bold;
-  text-decoration-line: underline;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
 }
 
 #pressSpaceText {

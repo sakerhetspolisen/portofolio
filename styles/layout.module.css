@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .container {
   opacity: 1;
 }
@@ -11,10 +18,17 @@
 
 .header {
   position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
-  align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   top: 0;
   padding: 10px 20px;
   left: 0;
@@ -23,7 +37,8 @@
 }
 
 .darkHeader .headerLogo img {
-  filter: invert(0.95);
+  -webkit-filter: invert(0.95);
+          filter: invert(0.95);
 }
 .darkHeader .tag {
   color: rgb(0, 13, 54);
@@ -34,8 +49,12 @@
 
 .tag {
   font-size: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .tag * {
   margin: 0 3px;
@@ -56,7 +75,6 @@
   display: block;
 }
 .nav ul li {
-  display: inline-block;
   line-height: 1;
   font-size: 22px;
   margin-left: 30px;

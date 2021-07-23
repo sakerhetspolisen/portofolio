@@ -1,13 +1,26 @@
 import Image from "next/image";
 import styles from "../styles/layout.module.css";
 import Link from "next/link";
-import Footer from "./footer.jsx"
+import Footer from "./footer.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-export default function Layout({ children, home, dark }) {
+// Component: Layout
+// This component structures the page. Contains the header and links to the main content.
+//
+// Props:
+//  - children: array **The main content of the page**
+// - home: boolean **Whether the page is the home page**
+// - dark: boolean **Whether the header should be dark**
+
+const Layout = ({ children, home, dark }) => {
   return (
     <div className={styles.container}>
-      <header className={dark ? `${styles.header} ${styles.darkHeader}` : styles.header} id="page-header">
+      <header
+        className={
+          dark ? `${styles.header} ${styles.darkHeader}` : styles.header
+        }
+        id="page-header"
+      >
         <div className={styles.headerLogo}>
           {home ? (
             <>
@@ -34,7 +47,9 @@ export default function Layout({ children, home, dark }) {
           )}
         </div>
         <div className={`${styles.tag} hide-on-mobile`}>
-          <span>Portfolio</span><b>4</b><span>2021</span>
+          <span>Portfolio</span>
+          <b>4</b>
+          <span>2021</span>
         </div>
         <nav className={styles.nav}>
           <ul>
@@ -55,4 +70,6 @@ export default function Layout({ children, home, dark }) {
       <Footer darkHeaderClass={styles.darkHeader}></Footer>
     </div>
   );
-}
+};
+
+export default Layout;

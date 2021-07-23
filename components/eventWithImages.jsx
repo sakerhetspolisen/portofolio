@@ -5,14 +5,25 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 
-export default function Event({
+// Component: EventWithImages
+// Used on home page for events that have images
+//
+// Props:
+// - title: string
+// - month: string **Which month the event happened**
+// - summary: string
+// - images: array of strings **List with all the image urls**
+// - linkText: string **Text to display for link**
+// - url: string **URL to event link**
+
+const EventWithImages = ({
   title,
   month,
   summary,
   images,
   linkText,
   url,
-}) {
+}) => {
   return (
     <Row className="justify-content-md-center" style={{ position: "relative" }}>
       <Col lg={6} sm={10}>
@@ -55,3 +66,5 @@ export default function Event({
     </Row>
   );
 }
+
+export default EventWithImages;

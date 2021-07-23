@@ -1,21 +1,21 @@
 import Head from "next/head";
 import Layout from "../components/layout";
-import utilStyles from "../styles/utils.module.css";
-import { Col, Row } from "react-bootstrap";
 import HeroBanner from "../components/homeBanner";
 import YearBanner from "../components/yearBanner";
 import Event from "../components/event";
 import EventWithImages from "../components/eventWithImages";
 import SnakeGame from "../components/snakeGame";
 
-export default function Home() {
+// Page: Home
+
+const Home = () => {
   return (
     <Layout home>
       <Head>
         <title>Karl Sellergren</title>
       </Head>
-      <SnakeGame/>
-      <HeroBanner/>
+      <SnakeGame />
+      <HeroBanner />
       <YearBanner year={200021}>
         <EventWithImages
           title="Founded my sole propriotorship"
@@ -103,4 +103,6 @@ export default function Home() {
       </YearBanner>
     </Layout>
   );
-}
+};
+
+export default Home;

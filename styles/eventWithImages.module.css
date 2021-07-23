@@ -1,70 +1,159 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .imageWrapper {
-    position: absolute;
-    z-index: 0;
-    background-color: var(--background-color);
-    animation: wobble 10s ease-in-out infinite alternate;
+  position: absolute;
+  z-index: 0;
+  background-color: var(--background-color);
+  -webkit-animation: wobble 10s ease-in-out infinite alternate;
+  animation: wobble 10s ease-in-out infinite alternate;
 }
 
 .imageWrapper img {
-    opacity: 0.3;
-    transition: 0.3s;
-    z-index: 0;
+  opacity: 0.3;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  z-index: 0;
 }
 
 .imageWrapper img:hover {
-    animation: flickerIn 0.6s;
+  -webkit-animation: flickerIn 0.6s;
+  animation: flickerIn 0.6s;
+  opacity: 1;
+}
+@-webkit-keyframes flickerIn {
+  0% {
+    opacity: 0.3;
+  }
+  48% {
+    opacity: 0.3;
+  }
+  70% {
     opacity: 1;
+  }
+  80% {
+    opacity: 0.2;
+  }
+  87% {
+    opacity: 0.8;
+  }
+  95% {
+    opacity: 1;
+  }
 }
 @keyframes flickerIn {
-    0% {opacity: 0.3;}
-    48% {opacity: 0.3;}
-    70% {opacity: 1;}
-    80% {opacity: 0.2;}
-    87% {opacity: 0.8;}
-    95% {opacity: 1;}
+  0% {
+    opacity: 0.3;
+  }
+  48% {
+    opacity: 0.3;
+  }
+  70% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.2;
+  }
+  87% {
+    opacity: 0.8;
+  }
+  95% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes wobble {
+  0% {
+    -webkit-transform: translate(5px, 8px);
+    transform: translate(5px, 8px);
+  }
+  48% {
+    -webkit-transform: translate(7px, 3px);
+    transform: translate(7px, 3px);
+  }
+  70% {
+    -webkit-transform: translate(9px, 2px);
+    transform: translate(9px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(13px, 5px);
+    transform: translate(13px, 5px);
+  }
+  87% {
+    -webkit-transform: translate(9px, 8px);
+    transform: translate(9px, 8px);
+  }
+  95% {
+    -webkit-transform: translate(7px, 13px);
+    transform: translate(7px, 13px);
+  }
 }
 @keyframes wobble {
-    0% {transform: translate(5px,8px);}
-    48% {transform: translate(7px,3px);}
-    70% {transform: translate(9px,2px);}
-    80% {transform: translate(13px,5px);}
-    87% {transform: translate(9px,8px);}
-    95% {transform: translate(7px,13px);}
+  0% {
+    -webkit-transform: translate(5px, 8px);
+    transform: translate(5px, 8px);
+  }
+  48% {
+    -webkit-transform: translate(7px, 3px);
+    transform: translate(7px, 3px);
+  }
+  70% {
+    -webkit-transform: translate(9px, 2px);
+    transform: translate(9px, 2px);
+  }
+  80% {
+    -webkit-transform: translate(13px, 5px);
+    transform: translate(13px, 5px);
+  }
+  87% {
+    -webkit-transform: translate(9px, 8px);
+    transform: translate(9px, 8px);
+  }
+  95% {
+    -webkit-transform: translate(7px, 13px);
+    transform: translate(7px, 13px);
+  }
 }
 
 .imageWrapper:nth-of-type(4) {
-    bottom: 10vw;
-    right: 3vw;
-    width: 25vw;
-    height: 25vw;
-    animation-delay: 3s;
+  bottom: 10vw;
+  right: 3vw;
+  width: 25vw;
+  height: 25vw;
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
 }
 
 .imageWrapper:nth-of-type(5) {
-    top: 5vw;
-    right: 18vw;
-    width: 24vw;
-    height: 24vw;
-    animation-delay: 5s;
+  top: 5vw;
+  right: 18vw;
+  width: 24vw;
+  height: 24vw;
+  -webkit-animation-delay: 5s;
+  animation-delay: 5s;
 }
 
 .imageWrapper:nth-of-type(3) {
-    top: 12vw;
-    left: 15vw;
-    width: 23vw;
-    height: 23vw;
+  top: 12vw;
+  left: 15vw;
+  width: 23vw;
+  height: 23vw;
 }
 
 .textWrapper {
-    position: relative;
-    margin: 300px 0;
-    z-index: 1;
+  position: relative;
+  margin: 300px 0;
+  z-index: 1;
 }
-@media screen and (max-width:992px) {
-    .textWrapper {
-        margin: 50px 0;
-    }
-    .textWrapper p {
-        font-size: 0.9rem;
-    }
+@media screen and (max-width: 992px) {
+  .textWrapper {
+    margin: 50px 0;
+  }
+  .textWrapper p {
+    font-size: 0.9rem;
+  }
 }

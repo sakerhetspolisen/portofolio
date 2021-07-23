@@ -1,10 +1,19 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 .container {
   height: 110vh;
   overflow: hidden;
   position: relative;
 }
 .container canvas {
-  transform: scale(2);
+  -webkit-transform: scale(2);
+      -ms-transform: scale(2);
+          transform: scale(2);
   display: block;
   width: 100%;
   height: 100%;
@@ -24,7 +33,9 @@
     position: absolute;
     top: calc(50% + 8vw);
     left: 50%;
-    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
     width: auto;
     max-width: initial;
 }
@@ -38,18 +49,33 @@
   line-height: 1;
   color: rgb(0, 13, 54);
   opacity: 0;
-  animation: moveup 2s ease-in-out;
-  animation-fill-mode: forwards;
+  -webkit-animation: moveup 2s ease-in-out;
+          animation: moveup 2s ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 .container span:nth-child(1) {
-  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 .container span:nth-child(2) {
-  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 .container span b {
-  animation: flicker 2s;
-  animation-delay: 300ms;
+  -webkit-animation: flicker 2s;
+          animation: flicker 2s;
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+}
+@-webkit-keyframes flicker {
+  0% {opacity: 0;}
+  48% {opacity: 0;}
+  70% {opacity: 1;}
+  80% {opacity: 0.2;}
+  87% {opacity: 0.8;}
+  95% {opacity: 1;}
+  100% {opacity: 1;}
 }
 @keyframes flicker {
   0% {opacity: 0;}
@@ -67,7 +93,11 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+@-webkit-keyframes moveup {
+    from {-webkit-transform: translateY(200px);transform: translateY(200px);opacity: 0;}
+    to {-webkit-transform: translateY(0);transform: translateY(0);opacity: 1;}
+}
 @keyframes moveup {
-    from {transform: translateY(200px);opacity: 0;}
-    to {transform: translateY(0);opacity: 1;}
+    from {-webkit-transform: translateY(200px);transform: translateY(200px);opacity: 0;}
+    to {-webkit-transform: translateY(0);transform: translateY(0);opacity: 1;}
 }
