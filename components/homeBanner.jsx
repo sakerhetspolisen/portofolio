@@ -39,7 +39,7 @@ const HomeBanner = () => {
           style={{
             position: "absolute",
             top: "50%",
-            left: "50%",
+            left: "calc(50% + 10px)",
             transform: "translate(-50%,-50%)",
             padding: "0",
             display: "block",

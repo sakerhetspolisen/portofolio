@@ -13,7 +13,7 @@ export default function Layout({ children, home, dark }) {
             <>
               <Image
                 priority
-                src="/images/logo.png"
+                src="/images/logo.svg"
                 className={styles.headerLogo}
                 layout="fill"
               />
@@ -24,7 +24,7 @@ export default function Layout({ children, home, dark }) {
                 <a>
                   <Image
                     priority
-                    src="/images/logo.png"
+                    src="/images/logo.svg"
                     className={styles.headerLogo}
                     layout="fill"
                   />

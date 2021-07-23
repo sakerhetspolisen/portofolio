@@ -3,8 +3,8 @@
 }
 
 .headerLogo {
-  height: 34px;
-  width: 130px;
+  height: 40px;
+  width: 150px;
   display: inline-block;
   position: relative;
 }
@@ -15,7 +15,8 @@
   flex-wrap: nowrap;
   justify-content: space-between;
   align-items: center;
-  top: 20px;
+  top: 0;
+  padding: 10px 20px;
   left: 0;
   width: 100%;
   z-index: 1000;
@@ -57,8 +58,10 @@
 .nav ul li {
   display: inline-block;
   line-height: 1;
-  font-size: 50px;
+  font-size: 22px;
   margin-left: 30px;
+  padding: 5px;
+  float: right;
 }
 .nav ul li a {
   color: var(--text-color);

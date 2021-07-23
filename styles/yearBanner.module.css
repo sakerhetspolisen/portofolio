@@ -1,10 +1,11 @@
 .section {
   height: 44vw;
   position: relative;
+  z-index: 3;
 }
 
 .overflowContainer {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .year {
@@ -19,7 +20,7 @@
   transform: translateX(-50%);
 
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-width: 15px;
+  -webkit-text-stroke-width: 1vw;
   -webkit-text-stroke-color: var(--text-color);
-  text-shadow: 0 0 40px var(--text-shadow-color);
+  text-shadow: 0 0 3vw var(--text-shadow-color);
 }

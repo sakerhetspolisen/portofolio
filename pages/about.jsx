@@ -3,7 +3,7 @@ import Link from "next/link";
 import utilStyles from "../styles/utils.module.css";
 import Layout from "../components/layout";
 import { Container, Col, Row } from "react-bootstrap";
-import StackItem from "../components/stackItem"
+import StackItem from "../components/stackItem";
 
 export default function FirstPost() {
   return (

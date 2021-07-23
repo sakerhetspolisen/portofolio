@@ -56,3 +56,12 @@
 .lightText {
   color: #666;
 }
+
+@media screen and (max-width:576px) {
+  .headingLg {
+    font-size: 1.6rem;
+  }
+  .headingXl {
+    font-size: 1.6rem;
+  }
+}

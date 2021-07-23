@@ -357,7 +357,7 @@ class SnakeGame extends React.Component {
     }
 
     return (
-      <div className={styles.container}>
+      <div className={`${styles.container} hide-on-mobile`}>
         <div
           id={styles.gameBoard}
           style={{

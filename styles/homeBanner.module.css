@@ -34,7 +34,7 @@
 }
 
 .heading {
-  font-size: 10vw;
+  font-size: 12vw;
   line-height: 0.8;
   font-weight: 800;
   margin: 1rem 0;
@@ -52,6 +52,22 @@
 .heading span {
   display: block;
 }
+@media screen and (max-width: 900px) {
+  .heading {
+    font-size: 16vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .heading {
+    -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
+    -webkit-text-stroke-width: 0;
+    line-height: 1.1;
+    text-shadow: none;
+  }
+  .section {
+    height: 108vh;
+  }
+}
 @keyframes flicker {
     0% {opacity: 0;}
     48% {opacity: 0;}
@@ -59,4 +75,4 @@
     80% {opacity: 0.2;}
     87% {opacity: 0.8;}
     95% {opacity: 1;}
-  }
+}

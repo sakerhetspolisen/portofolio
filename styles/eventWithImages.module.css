@@ -1,33 +1,70 @@
-.imageWrapper:nth-of-type(4) {
+.imageWrapper {
     position: absolute;
-    right: 200px;
-    top: 100px;
-    width: 370px;
-    height: 300px;
+    z-index: 0;
+    background-color: var(--background-color);
+    animation: wobble 10s ease-in-out infinite alternate;
+}
+
+.imageWrapper img {
+    opacity: 0.3;
+    transition: 0.3s;
+    z-index: 0;
+}
+
+.imageWrapper img:hover {
+    animation: flickerIn 0.6s;
+    opacity: 1;
+}
+@keyframes flickerIn {
+    0% {opacity: 0.3;}
+    48% {opacity: 0.3;}
+    70% {opacity: 1;}
+    80% {opacity: 0.2;}
+    87% {opacity: 0.8;}
+    95% {opacity: 1;}
+}
+@keyframes wobble {
+    0% {transform: translate(5px,8px);}
+    48% {transform: translate(7px,3px);}
+    70% {transform: translate(9px,2px);}
+    80% {transform: translate(13px,5px);}
+    87% {transform: translate(9px,8px);}
+    95% {transform: translate(7px,13px);}
+}
+
+.imageWrapper:nth-of-type(4) {
+    bottom: 10vw;
+    right: 3vw;
+    width: 25vw;
+    height: 25vw;
+    animation-delay: 3s;
 }
 
 .imageWrapper:nth-of-type(5) {
-    position: absolute;
-    right: 130px;
-    bottom: 100px;
-    width: 340px;
-    height: 340px;
+    top: 5vw;
+    right: 18vw;
+    width: 24vw;
+    height: 24vw;
+    animation-delay: 5s;
 }
 
 .imageWrapper:nth-of-type(3) {
-    position: absolute;
-    right: 500px;
-    bottom: 0px;
-    width: 300px;
-    height: 250px;
+    top: 12vw;
+    left: 15vw;
+    width: 23vw;
+    height: 23vw;
 }
 
 .textWrapper {
     position: relative;
     margin: 300px 0;
+    z-index: 1;
 }
 @media screen and (max-width:992px) {
     .textWrapper {
         margin: 50px 0;
+    }
+    .textWrapper p {
+        font-size: 0.9rem;
     }
 }

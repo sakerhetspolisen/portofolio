@@ -30,38 +30,46 @@ const Footer = () => {
             position: "relative"
           }}
         >
-          <Row style={{ height: "80vh" }}>
+          <Row>
             <Col
               md={8}
               style={{
                 display: "flex",
                 alignItems: "center",
+                height: "80vh",
               }}
             >
               <div style={{ position: "relative" }}>
-                <div
-                  style={{
-                    position: "absolute",
-                    top: 15,
-                    right: 15,
-                    transform: "translate(50%,-50%)",
-                  }}
-                >
-                  <Image
-                    priority
-                    src="/images/pixelpizza.png"
-                    width="50"
-                    height="50"
-                  />
-                </div>
                 <h4
                   style={{
                     color: "white",
                     fontSize: 60,
-                    marginLeft: 30
+                    marginLeft: 30,
+                    lineHeight: "1"
                   }}
                 >
-                  Let's talk over a pizza.
+                  Let's talk over <span style={{display: "inline-block",marginRight: 15}}>a</span>
+                  <span style={{
+                    display: "inline-block",
+                    position: "relative"
+                  }}>
+                    pizza.
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: 15,
+                        right: 15,
+                        transform: "translate(50%,-50%)",
+                      }}
+                    >
+                      <Image
+                        priority
+                        src="/images/pixelpizza.png"
+                        width="50"
+                        height="50"
+                      />
+                    </div>
+                  </span>
                 </h4>
                 <p style={{color:"white",marginLeft:30}}><b>Currently in:</b> Helsingborg, Sweden</p>
               </div>
@@ -70,7 +78,7 @@ const Footer = () => {
                 display: "flex",
                 alignItems: "center",
               }}>
-            <div>
+            <div style={{ marginRight: 30, marginLeft: 25, padding: "20px 0" }}>
               <h5 style={{color:"white"}}>Get in touch</h5>
               <a href="https://www.linkedin.com/in/karlsellergren" style={{color:"white",display:"block",margin:"7px 0"}}>Linkedin</a>
               <a href="https://www.github.com/sakerhetspolisen" style={{color:"white",display:"block",margin:"7px 0"}}>Github</a>
@@ -79,20 +87,21 @@ const Footer = () => {
             </div>
             </Col>
           </Row>
-          <p style={{
-              color:"white",
-              position: "absolute",
-              left: 45,
-              bottom: 20,
-              fontSize: 15
-              }}>Made with &#128150; by Karl Sellergren. <a href="https://www.github.com/sakerhetspolisen" style={{color:"white",textDecoration: "underline",}}>Source code</a></p>
-          <p style={{
-              color:"white",
-              position: "absolute",
-              right: 45,
-              bottom: 20,
-              fontSize: 15
-              }}>© {(new Date().getFullYear())}</p>
+          <Row style={{ justifyContent: "space-between", margin: "30px 10px" }}>
+            <Col md={"auto"}>
+              <p style={{
+                color:"white",
+                fontSize: 15,
+                margin: 0
+                }}>Made with &#128150; by Karl Sellergren. <a href="https://www.github.com/sakerhetspolisen" style={{color:"white",textDecoration: "underline",}}>Source code</a></p>
+            </Col>
+            <Col md={"auto"}>
+              <p style={{
+                color:"white",
+                fontSize: 15,
+                margin: 0
+              }}>© {(new Date().getFullYear())}</p></Col>
+          </Row>
         </Container>
       </footer>
     </>
