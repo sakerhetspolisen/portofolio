@@ -3,7 +3,7 @@ import React, { useRef, useEffect } from "react";
 import Layout from "../components/layout";
 import styles from "../styles/work.module.css";
 import { Col, Container, Row } from "react-bootstrap";
-import ProjectsList from "../components/sampleProject";
+import ProjectsList from "../components/projectsList";
 
 // Page: Work
 

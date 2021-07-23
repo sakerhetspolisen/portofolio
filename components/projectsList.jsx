@@ -25,8 +25,8 @@ export default function ProjectsList() {
   const { loading, error, data } = useQuery(ALL_PROJECTS_QUERY);
 
   if (error)
-    return <div>&#128559; Whoops! There was an error loading my projects.</div>;
-  if (loading) return <div>&#128336; Loading...</div>;
+    return <div><p style={{textAlign: "center"}}>&#128559; Whoops! There was an error loading my projects.</p></div>;
+  if (loading) return <div><p style={{textAlign: "center"}}>&#128336; Loading...</p></div>;
 
   const { projects: allProjects } = data;
 
@@ -35,22 +35,22 @@ export default function ProjectsList() {
       <Row className={styles.project}>
         <Col xl={6} md={6}>
           <div className={styles.upper}>
-            <a href="https://www.google.se">
+            <a href={project.referrerUrl}>
               <ReactReveal bottom>
-                <h2>Killergame Procivitas</h2>
+                <h2>{project.title}</h2>
               </ReactReveal>
               <ReactReveal delay={500}>
-                <p>Web developer</p>
+                <p>{project.role}</p>
               </ReactReveal>
             </a>
           </div>
           <div className={styles.lower}>
-            <a href="https://www.google.se">
+            <a href={project.referrerUrl}>
               <ReactReveal delay={500}>
-                <p>Lorem ipsum dolor sit amet, et past mancum factum post.</p>
+                <p>{project.summary}</p>
               </ReactReveal>
               <ReactReveal bottom cascade>
-                <p className={styles.year}>2020</p>
+                <p className={styles.year}>{project.year}</p>
               </ReactReveal>
             </a>
           </div>
@@ -58,7 +58,7 @@ export default function ProjectsList() {
         <Col md={6}>
           <div className={styles.carouselContainer}>
             <ProjectCarousel
-              imagesAndVideosSrcList={[thumbnailUrl]}
+              imagesAndVideosSrcList={[project.thumbnailUrl]}
               imageClass={styles.carouselImages}
             />
           </div>
