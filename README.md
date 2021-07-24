@@ -1,8 +1,8 @@
 <div align="center">
 <img src="https://raw.githubusercontent.com/sakerhetspolisen/portofolio/master/thumbnail.svg">
   <h1>My portfolio website for 2021.</h1>
-  <p>Have you tried the snake-game? My high-score is higher than yours :)</p>
-  <p><b>REST API created with <a href="https://github.com/apollographql/apollo-client">Apollo GraphQL 🚀</a>, the used React Framework is <a href="https://github.com/vercel/next.js">Next.JS</a>, website structure is made possible by <a href="https://www.npmjs.com/package/bootstrap">Bootstrap 5</a>.</b></p>
+  <p>Have you tried the snake-game? 🐍 My high-score is higher than yours :)</p>
+  <p><b>Take a look for yourself at <a href="https://seller.green">seller.green</a>✨</b></p>
   <br/>
 </div>
 
