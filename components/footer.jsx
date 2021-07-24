@@ -60,7 +60,7 @@ const Footer = ({ darkHeaderClass }) => {
               }}
             >
               <div style={{ position: "relative" }}>
-                <h4
+                <h2
                   style={{
                     color: "white",
                     fontSize: 60,
@@ -92,10 +92,11 @@ const Footer = ({ darkHeaderClass }) => {
                         src="/images/pixelpizza.png"
                         width="50"
                         height="50"
+                        alt="Pixelated pizza"
                       />
                     </div>
                   </span>
-                </h4>
+                </h2>
                 <p style={{ color: "white", marginLeft: 30 }}>
                   <b>Currently in:</b> Helsingborg, Sweden
                 </p>
@@ -157,6 +158,7 @@ const Footer = ({ darkHeaderClass }) => {
                 <a
                   href="https://www.github.com/sakerhetspolisen/portofolio"
                   target="_blank"
+                  rel="noopener"
                   style={{ color: "white", textDecoration: "underline" }}
                 >
                   Source code
