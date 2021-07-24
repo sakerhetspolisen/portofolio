@@ -111,7 +111,7 @@ const Footer = ({ darkHeaderClass }) => {
               <div
                 style={{ marginRight: 30, marginLeft: 25, padding: "20px 0" }}
               >
-                <h5 style={{ color: "white" }}>Get in touch</h5>
+                <h3 style={{ color: "white", fontSize: 22.5 }}>Get in touch</h3>
                 <a
                   href="https://www.linkedin.com/in/karlsellergren"
                   target="_blank"

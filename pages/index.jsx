@@ -23,16 +23,16 @@ const Home = () => {
         <EventWithImages
           title="Founded my sole propriotorship"
           month="May"
-          summary='I was the team-lead of the project "Give a Bag, Get a Test" which won 6th place in the nationwide, state-organized competition Hack The Crisis. Over 5000 participants took part in the competition, and our category had over 120 teams that competed against us. We landed at 6th place and were the only team containing solely of High school students in our category.'
+          summary='Having developed websites for small projects a while it was a no-brainer for me to start a real business and connect with bigger clients. I freelance in web development and web consultation and have over 4 years of experience.'
           images={[]}
         />
         <Event
-          title="Started working as a programming teacher at Procivitas."
+          title="Started working as a Python teacher at Procivitas."
           month="April"
           width="7"
           displacement="3"
         />
-        <Event title="Interviewed at Imperial College London." month="March" />
+        <Event title="Interviewed at Imperial College London for Information Engineering." month="March" />
       </YearBanner>
       <YearBanner year={200020}>
         <Event
@@ -85,7 +85,7 @@ const Home = () => {
         <EventWithImages
           title="Started freelancing in frontend development"
           month="December"
-          summary="I spent the whole year preparing for my studies at Procivitas high school STEM programme. During the first two years I gained an understanding of Classical and Modern Physics, Mathematics on a higher level, algorithm design and programming in Python."
+          summary="I gained an understanding of HTML, CSS and Javascript and was able to softly start developing websites for various entities. This was a start for a long learning trip, where I managed to learn Wordpress, React, Apollo, Next.JS and more."
           images={["revenuir.png", "sccoStudio.png", "partikular.png"]}
         />
         <Event
