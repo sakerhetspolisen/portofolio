@@ -18,7 +18,7 @@ const Footer = ({ darkHeaderClass }) => {
       const scrollPos = window.scrollY + window.innerHeight;
       if (scrollPos > footerBottom - 200) {
         // Footer scrolled to
-        document.body.style.background = "#5433ff";
+        document.body.style.background = "#000d36";
         if (
           document
             .getElementById("page-header")
