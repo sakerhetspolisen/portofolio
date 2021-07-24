@@ -114,6 +114,7 @@ const Footer = ({ darkHeaderClass }) => {
                 <a
                   href="https://www.linkedin.com/in/karlsellergren"
                   target="_blank"
+                  rel="noopener"
                   style={{ color: "white", display: "block", margin: "7px 0" }}
                 >
                   Linkedin
@@ -121,6 +122,7 @@ const Footer = ({ darkHeaderClass }) => {
                 <a
                   href="https://www.github.com/sakerhetspolisen"
                   target="_blank"
+                  rel="noopener"
                   style={{ color: "white", display: "block", margin: "7px 0" }}
                 >
                   Github
@@ -128,6 +130,7 @@ const Footer = ({ darkHeaderClass }) => {
                 <a
                   href="https://www.upwork.com/freelancers/~01fb5d8636e09c5330"
                   target="_blank"
+                  rel="noopener"
                   style={{ color: "white", display: "block", margin: "7px 0" }}
                 >
                   Upwork

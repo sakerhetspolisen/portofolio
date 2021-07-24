@@ -38,11 +38,11 @@ const EventWithImages = ({
           >
             {month}
           </span>
-          <h3 className={utilStyles.headingLg}>{title}</h3>
+          <h2 className={utilStyles.headingLg}>{title}</h2>
           <p>{summary}</p>
           {url ? (
             <>
-              <a href={url} target="_blank">
+              <a href={url} target="_blank" rel="noopener">
                 {linkText}
                 <FontAwesomeIcon icon={faArrowRight} />
               </a>

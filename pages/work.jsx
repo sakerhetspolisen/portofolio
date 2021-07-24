@@ -53,13 +53,14 @@ const Work = () => {
   return (
     <Layout dark>
       <Head>
-        <title>Work - Karl Sellergren</title>
+        <title>Work / Karl Sellergren.</title>
+        <meta name="description" content="My recent projects are made for agencies, magazines, schools and individuals. See a list of all my recent projects."></meta>
       </Head>
       <Container className={styles.container}>
         <canvas width="2" height="2" ref={gradientRef}></canvas>
         <Row>
           <Col className={styles.overflower}>
-            <span className={styles.shadows}>Latest Work</span>
+            <h1 className={styles.shadows}>Latest Work</h1>
             <span className={styles.shadows}>Latest Work</span>
             <span>
               L<b>a</b>te<b>s</b>t Wo<b>r</b>k

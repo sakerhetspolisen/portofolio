@@ -15,6 +15,7 @@
   margin-top: 100px;
   margin-left: 60px;
   font-family: 'Subjectivity', Arial, Helvetica, sans-serif;
+  font-display: swap;
 }
 
 .waveHolder {
@@ -62,6 +63,7 @@
   font-size: 6vw;
   font-weight: 800;
   font-family: 'Subjectivity', Arial, Helvetica, sans-serif;
+  font-display: swap;
   letter-spacing: -0.1vw;
   line-height: 0.9;
   margin: 0;

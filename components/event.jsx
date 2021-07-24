@@ -46,11 +46,11 @@ const Event = ({
           >
             {month}
           </span>
-          <h3 className={utilStyles.headingXl}>{title}</h3>
+          <h2 className={utilStyles.headingXl}>{title}</h2>
           <p>{summary}</p>
           {url ? (
             <>
-              <a href={url} target="_blank">
+              <a href={url} target="_blank" rel="noopener">
                 {linkText}
                 <FontAwesomeIcon icon={faArrowRight} />
               </a>

@@ -16,7 +16,8 @@
 }
 
 .year {
-  font-family: "Krisha";
+  font-family: "Krisha", Arial, Helvetica, sans-serif;
+  font-display: swap;
   font-size: 55vw;
   font-weight: 800;
   margin: 0;

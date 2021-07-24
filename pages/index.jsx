@@ -12,7 +12,10 @@ const Home = () => {
   return (
     <Layout home>
       <Head>
-        <title>Karl Sellergren</title>
+        <title>Karl Sellergren. : Frontend developer with class.</title>
+        <meta name="description" content="I am a front-end developer based in Helsingborg,
+              Sweden. I work with companies, agencies and individuals
+              all over the world, creating beautiful things."></meta>
       </Head>
       <SnakeGame />
       <HeroBanner />

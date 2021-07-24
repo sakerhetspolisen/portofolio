@@ -50,6 +50,7 @@ html {
 html,
 body {
   font-family: var(--default-font);
+  font-display: swap;
   font-weight: normal;
   font-style: normal;
   padding: 0;

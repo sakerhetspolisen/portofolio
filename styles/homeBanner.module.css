@@ -65,7 +65,8 @@
   letter-spacing: 0.1vw;
   white-space: nowrap;
   text-align: center;
-  font-family: "Krisha";
+  font-family: "Krisha", Arial, Helvetica, sans-serif;
+  font-display: swap;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 0.1vw;
   -webkit-text-stroke-color: rgb(89, 0, 255);

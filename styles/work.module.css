@@ -39,10 +39,11 @@
     width: auto;
     max-width: initial;
 }
-.container span {
+.container span, .container h1 {
   white-space: nowrap;
   display: block;
-  font-family: "Krisha";
+  font-family: "Krisha", Arial, Helvetica, sans-serif;
+  font-display: swap;
   font-size: 30vw;
   margin: 0;
   margin-top: -20vw;
@@ -54,7 +55,7 @@
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
-.container span:nth-child(1) {
+.container h1 {
   -webkit-animation-delay: 1s;
           animation-delay: 1s;
 }

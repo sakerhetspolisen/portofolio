@@ -29,6 +29,7 @@ const Layout = ({ children, home, dark }) => {
                 src="/images/logo.svg"
                 className={styles.headerLogo}
                 layout="fill"
+                alt="Karl Sellergren"
               />
             </>
           ) : (
@@ -40,6 +41,7 @@ const Layout = ({ children, home, dark }) => {
                     src="/images/logo.svg"
                     className={styles.headerLogo}
                     layout="fill"
+                    alt="Karl Sellergren"
                   />
                 </a>
               </Link>

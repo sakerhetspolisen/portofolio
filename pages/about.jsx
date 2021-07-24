@@ -12,7 +12,9 @@ const About = () => {
   return (
     <Layout>
       <Head>
-        <title>Work - Karl Sellergren</title>
+        <title>About / Karl Sellergren.</title>
+        <meta name="description" content="I am a front-end developer based in Helsingborg,
+              Sweden. See my stack and previous work experience."></meta>
       </Head>
       <Container className="pt-xl-5 pl-xl-5 pt-5 pl-4 pr-4">
         <Row className="pt-5">
@@ -24,13 +26,13 @@ const About = () => {
               was <u>Young Laundry</u> where I worked as a{" "}
               <u>frontend developer</u>. I publish the majority of the source
               code I write on Github as open-source projects, please check them
-              out in my <a href="https://www.github.com/sakerhetspolisen" target="_blank" style={{color: "white", textDecoration: "underline"}}>profile.</a>
+              out in my <a href="https://www.github.com/sakerhetspolisen" target="_blank" rel="noopener" style={{color: "white", textDecoration: "underline"}}>profile.</a>
             </p>
             <p style={{ fontSize: 30, lineHeight: 1.2, fontWeight: 300 }}>
               Before working as a freelancing developer I was the Chief
               Technical Officer at Swedens biggest STEM magazine called
               Partikular. Amongst other things, I was the lead developer for
-              their <a href="https://www.partikular.se" target="_blank" style={{color: "white", textDecoration: "underline"}}>website</a>.
+              their <a href="https://www.partikular.se" target="_blank" rel="noopener" style={{color: "white", textDecoration: "underline"}}>website</a>.
             </p>
           </Col>
           <Col lg={7} className="pt-3 pl-xl-5 pr-xl-5 pt-lg-0">
