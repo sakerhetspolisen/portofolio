@@ -3,7 +3,7 @@ const withOptimizedImages = require('next-optimized-images');
 module.exports = withOptimizedImages({
   /* config for next-optimized-images */
   images: {
-    domains: [],
+    domains: ['res.cloudinary.com'],
   },
   i18n: {
     // These are all the locales you want to support in
