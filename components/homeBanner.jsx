@@ -1,11 +1,16 @@
 import { Container, Row, Col } from "react-bootstrap";
 import styles from "../styles/homeBanner.module.css";
 import React, { useLayoutEffect, useRef, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowCircleDown } from "@fortawesome/free-solid-svg-icons";
 
 // Component: HomeHero
 // Shown behind the Snake-Game on home-page. Reacts on scroll.
+//
+// Props:
+// - gameHasStarted: boolean **If the snake game has started**
 
-const HomeHero = () => {
+const HomeHero = ({ gameHasStarted }) => {
   const [show, doShow] = useState({
     homeBanner: false,
   });
@@ -42,7 +47,7 @@ const HomeHero = () => {
         <Row
           style={{
             position: "absolute",
-            top: "50%",
+            top: "calc(50% - 10px)",
             left: "calc(50% + 10px)",
             transform: "translate(-50%,-50%)",
             padding: "0",
@@ -58,9 +63,11 @@ const HomeHero = () => {
                       ? (percentShown.homeBanner / 100) * 200
                       : 0
                   }px)`,
+                  opacity: gameHasStarted ? 0.5 : 1,
+                  transition: "0.3s"
                 }}
               >
-                18-year old frontend
+                Hi! I'm a frontend
               </span>
               <span
                 style={{
@@ -69,6 +76,8 @@ const HomeHero = () => {
                       ? -(percentShown.homeBanner / 100) * 60
                       : 0
                   }px)`,
+                  opacity: gameHasStarted ? 0.5 : 1,
+                  transition: "0.3s"
                 }}
               >
                 developer crafting
@@ -80,6 +89,8 @@ const HomeHero = () => {
                       ? (percentShown.homeBanner / 100) * 80
                       : 0
                   }px)`,
+                  opacity: gameHasStarted ? 0.5 : 1,
+                  transition: "0.3s"
                 }}
               >
                 digital products
@@ -91,11 +102,26 @@ const HomeHero = () => {
                       ? -(percentShown.homeBanner / 100) * 80
                       : 0
                   }px)`,
+                  opacity: gameHasStarted ? 0.5 : 1,
+                  transition: "0.3s"
                 }}
               >
                 since 2017.
               </span>
             </h1>
+          </Col>
+        </Row>
+        <Row style={{
+              position: "absolute",
+              bottom: 27,
+              left: "50%",
+              transform: "translateX(-50%)",
+              fontSize: 15,
+            }}>
+          <Col>
+            <div>
+              <span className={styles.scroller}><FontAwesomeIcon icon={faArrowCircleDown}/>Scroll down through my career</span>
+            </div>
           </Col>
         </Row>
       </Container>

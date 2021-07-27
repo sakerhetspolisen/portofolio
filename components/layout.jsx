@@ -11,8 +11,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 //  - children: array **The main content of the page**
 // - home: boolean **Whether the page is the home page**
 // - dark: boolean **Whether the header should be dark**
+// - footerSpice: boolean **Whether the footer should change color**
 
-const Layout = ({ children, home, dark }) => {
+const Layout = ({ children, home, dark, footerSpice }) => {
   return (
     <div className={styles.container}>
       <header
@@ -69,7 +70,7 @@ const Layout = ({ children, home, dark }) => {
         </nav>
       </header>
       <main>{children}</main>
-      <Footer darkHeaderClass={styles.darkHeader}></Footer>
+      <Footer darkHeaderClass={styles.darkHeader} shouldHaveColor={footerSpice}></Footer>
     </div>
   );
 };

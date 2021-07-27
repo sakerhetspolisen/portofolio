@@ -8,8 +8,9 @@ import { faDoorClosed } from "@fortawesome/free-solid-svg-icons";
 //
 // Props:
 // - darkHeaderClass: string **If the current page has a dark header, this class will be added to the header**
+// - shouldHaveColor: boolean **If the background should change color**
 
-const Footer = ({ darkHeaderClass }) => {
+const Footer = ({ darkHeaderClass, shouldHaveColor }) => {
   const footerRef = useRef(null);
   useLayoutEffect(() => {
     const footerBottom = document.body.scrollHeight;
@@ -18,7 +19,7 @@ const Footer = ({ darkHeaderClass }) => {
       const scrollPos = window.scrollY + window.innerHeight;
       if (scrollPos > footerBottom - 200) {
         // Footer scrolled to
-        document.body.style.background = "#000d36";
+        document.body.style.background = shouldHaveColor ? "#5433ff" : "#000d36";
         if (
           document
             .getElementById("page-header")

@@ -3,6 +3,7 @@ import styles from "../styles/event.module.css";
 import utilStyles from "../styles/utils.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import ReactReveal from "react-reveal/Fade";
 
 // Component: Event
 // Used on home page for events that don't have images
@@ -36,24 +37,32 @@ const Event = ({
       )}
       <Col lg={width} sm={10}>
         <div className={styles.wrapper}>
-          <span
-            style={{
-              textTransform: "uppercase",
-              fontSize: "0.8rem",
-              margin: "10px 0",
-              display: "block",
-            }}
-          >
-            {month}
-          </span>
-          <h2 className={utilStyles.headingXl}>{title}</h2>
-          <p>{summary}</p>
+          <ReactReveal bottom cascade>
+            <span
+              style={{
+                textTransform: "uppercase",
+                fontSize: "0.8rem",
+                margin: "10px 0",
+                display: "block",
+              }}
+            >
+              {month}
+            </span>
+          </ReactReveal>
+          <ReactReveal>
+            <h2 className={utilStyles.headingXl}>{title}</h2>
+          </ReactReveal>
+          <ReactReveal delay={800}>
+            <p>{summary}</p>
+          </ReactReveal>
           {url ? (
             <>
-              <a href={url} target="_blank" rel="noopener">
-                {linkText}
-                <FontAwesomeIcon icon={faArrowRight} />
-              </a>
+              <ReactReveal delay={1200} bottom>
+                <a href={url} target="_blank" rel="noopener">
+                  {linkText}
+                  <FontAwesomeIcon icon={faArrowRight} />
+                </a>
+              </ReactReveal>
             </>
           ) : (
             <></>

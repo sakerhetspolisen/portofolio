@@ -55,13 +55,30 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  bottom: 50px;
-  right: 50px;
+  bottom: 30px;
+  right: 30px;
   text-align: left;
-  z-index: 2;
   font-size: 15px;
   line-height: 0;
   z-index: 0;
+}
+
+#instructions {
+  position: absolute;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  bottom: 30px;
+  left: 30px;
+  text-align: left;
+  font-size: 15px;
+  line-height: 0;
+  z-index: 0;
+}
+
+.hideInGame {
+  transition: 1s;
+  opacity: 0;
 }
 
 #exampleApple {

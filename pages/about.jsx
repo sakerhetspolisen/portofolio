@@ -10,7 +10,7 @@ import StackItem from "../components/stackItem";
 
 const About = () => {
   return (
-    <Layout>
+    <Layout footerSpice>
       <Head>
         <title>About / Karl Sellergren.</title>
         <meta name="description" content="I am a front-end developer based in Helsingborg,
@@ -23,10 +23,10 @@ const About = () => {
               Ciao! I am a freelancing front-end developer based in Helsingborg,
               Sweden. I work with companies, agencies, startups and individuals
               all over the world, creating beautiful things. My latest client
-              was <u>Young Laundry</u> where I worked as a{" "}
+              was <u>SCCO.Studio</u> where I worked as a{" "}
               <u>frontend developer</u>. I publish the majority of the source
               code I write on Github as open-source projects, please check them
-              out in my <a href="https://www.github.com/sakerhetspolisen" target="_blank" rel="noopener" style={{color: "white", textDecoration: "underline"}}>profile.</a>
+              out in my <a href="https://www.github.com/sakerhetspolisen" target="_blank" rel="noopener" style={{color: "white", textDecoration: "underline"}}>profile</a>.
             </p>
             <p style={{ fontSize: 30, lineHeight: 1.2, fontWeight: 300 }}>
               Before working as a freelancing developer I was the Chief
@@ -43,7 +43,7 @@ const About = () => {
                 className="mb-4 mt-3"
               ></hr>
               <Container className="pl-0 pr-0">
-                <StackItem title="React" desc="Hooks" margin="0">
+                <StackItem title="React" desc="Web development" margin="0">
                   <svg
                     viewBox="-11.5 -10.23174 23 20.46348"
                     style={{ height: 24, margin: "0 auto", display: "block" }}
@@ -58,7 +58,7 @@ const About = () => {
                     </g>{" "}
                   </svg>
                 </StackItem>
-                <StackItem title="CSS3" desc="Pseudo elements" margin="0">
+                <StackItem title="CSS3" desc="Web design" margin="0">
                   <svg
                     viewBox="0 0 256 361"
                     preserveAspectRatio="xMidYMid"
@@ -106,7 +106,7 @@ const About = () => {
                     </g>{" "}
                   </svg>
                 </StackItem>
-                <StackItem title="Python" desc="Recursion" margin="0">
+                <StackItem title="Python" desc="General-purpose" margin="0">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     style={{ height: 24, margin: "0 auto", display: "block" }}
@@ -147,7 +147,7 @@ const About = () => {
                 </StackItem>
                 <StackItem
                   title="Next.JS"
-                  desc="SEO-friendly, React-based websites"
+                  desc="SEO-friendly React"
                   margin="0"
                 >
                   <svg
@@ -169,7 +169,7 @@ const About = () => {
                 </StackItem>
                 <StackItem
                   title="Wordpress"
-                  desc="Theme development"
+                  desc="Content MS"
                   margin="0"
                 >
                   <svg

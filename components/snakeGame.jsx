@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "../styles/snakeGame.module.css";
 import GameOver from "./gameOver.jsx";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faKeyboard } from "@fortawesome/free-solid-svg-icons";
 
 // Component: SnakeGame
 // Game that can be played on home page. Uses the HTML canvas element.
@@ -308,6 +310,11 @@ class SnakeGame extends React.Component {
       return;
     }
 
+    if (!document.getElementById(styles.instructions).classList.contains(styles.hideInGame)) {
+      document.getElementById(styles.instructions).classList.add(styles.hideInGame);
+      this.props.gameHasStartedState(true);
+    }
+
     if (this.state.directionChanged) return;
 
     switch (event.keyCode) {
@@ -400,6 +407,9 @@ class SnakeGame extends React.Component {
           <div id={styles.score}>
             You have eaten {this.state.score}
             <div id={styles.exampleApple}></div>
+          </div>
+          <div id={styles.instructions}>
+            <span><FontAwesomeIcon icon={faKeyboard}/> Press arrow keys to play</span>
           </div>
         </div>
       </div>

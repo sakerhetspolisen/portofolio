@@ -11,7 +11,6 @@
   position: relative;
   max-width: none;
   padding: 0;
-  margin-bottom: -10vh;
   pointer-events: none;
   background: -o-radial-gradient(
     top center,
@@ -69,8 +68,8 @@
   font-display: swap;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 0.1vw;
-  -webkit-text-stroke-color: rgb(89, 0, 255);
-  text-shadow: 0 0 10px rgba(89, 0, 255,0.6);
+  -webkit-text-stroke-color: rgb(132, 66, 255);
+  text-shadow: 0 0 10px rgba(132, 66, 255, 0.6);
   -webkit-animation: flicker 2s;
           animation: flicker 2s;
 }
@@ -81,12 +80,13 @@
   .heading {
     font-size: 16vw;
   }
+  .scroller {display: none;}
 }
 @media screen and (max-width: 768px) {
   .heading {
-    -webkit-text-fill-color: rgba(255, 255, 255, 0.9);
-    -webkit-text-stroke-width: 0;
     line-height: 1.1;
+    letter-spacing: 1px;
+    -webkit-text-stroke-width: 1px;
     text-shadow: none;
   }
   .section {

@@ -88,8 +88,8 @@
     transform: translate(9px, 8px);
   }
   95% {
-    -webkit-transform: translate(7px, 13px);
-    transform: translate(7px, 13px);
+    -webkit-transform: translate(7px, 9px);
+    transform: translate(7px, 9px);
   }
 }
 @keyframes wobble {
