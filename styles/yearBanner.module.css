@@ -34,3 +34,10 @@
   -webkit-text-stroke-color: var(--text-color);
   text-shadow: 0 0 3vw var(--text-shadow-color);
 }
+
+@media screen and (max-width: 768px) {
+  .year {
+    text-shadow: 0 0 5px var(--text-shadow-color);
+    -webkit-text-stroke-width: 3px;
+  }
+}
