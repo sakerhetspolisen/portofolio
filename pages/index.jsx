@@ -6,19 +6,71 @@ import Event from "../components/event";
 import EventWithImages from "../components/eventWithImages";
 import SnakeGame from "../components/snakeGame";
 import { useState } from "react";
+import socialImage from "../public/images/social.png";
 
 // Page: Home
 
 const Home = () => {
   const [gameHasStarted, setGameHasStarted] = useState(false);
 
+  const structuredDataPerson = {
+    "@context": "https://schema.org/",
+    "@type": "Person",
+    "name": "Karl Sellergren",
+    "url": "https://seller.green",
+    "image": "https://seller.green/_next/image?url=%2Fimages%2Fsocial.png",
+    "sameAs": [
+      "https://www.linkedin.com/in/karlsellergren",
+      "https://www.github.com/sakerhetspolisen"
+    ],
+    "jobTitle": "Freelancing web developer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Sellergren"
+    }  
+  }
+
+  const structuredDataBreadcrumbs = {
+    "@context": "https://schema.org/", 
+    "@type": "BreadcrumbList", 
+    "itemListElement": [{
+      "@type": "ListItem", 
+      "position": 1, 
+      "name": "Work",
+      "item": "https://seller.green/work"  
+    },{
+      "@type": "ListItem", 
+      "position": 2, 
+      "name": "About",
+      "item": "https://seller.green/about"  
+    }]
+  }
+
   return (
     <Layout home footerSpice>
       <Head>
         <title>Karl Sellergren : Leveling up your internet presence.</title>
-        <meta name="description" content="I am a front-end developer based in Helsingborg,
-              Sweden. I work with companies, agencies and individuals
-              all over the world, creating beautiful things."></meta>
+        <meta name="keywords" content="front-end, frontend, front-end developer, frontend developer, helsingborg, webbutvecklare"/>
+        <meta name="title" content="Karl Sellergren : Leveling up your internet presence."/>
+        <meta name="description" content="I am a front-end developer based in Helsingborg, Sweden. I work with companies, agencies and individuals all over the world, creating beautiful things."/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://seller.green/"/>
+        <meta property="og:title" content="Karl Sellergren : Leveling up your internet presence."/>
+        <meta property="og:description" content="I am a front-end developer based in Helsingborg, Sweden. I work with companies, agencies and individuals all over the world, creating beautiful things."/>
+        <meta property="og:image" content={socialImage}/>
+        <meta property="twitter:card" content="summary_large_image"/>
+        <meta property="twitter:url" content="https://seller.green/"/>
+        <meta property="twitter:title" content="Karl Sellergren : Leveling up your internet presence."/>
+        <meta property="twitter:description" content="I am a front-end developer based in Helsingborg, Sweden. I work with companies, agencies and individuals all over the world, creating beautiful things."/>
+        <meta property="twitter:image" content={socialImage}/>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredDataPerson) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredDataBreadcrumbs) }}
+        />
       </Head>
       <SnakeGame gameHasStartedState={setGameHasStarted} />
       <HeroBanner gameHasStarted={gameHasStarted} />
