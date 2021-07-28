@@ -2,19 +2,53 @@ import Head from "next/head";
 import Layout from "../components/layout";
 import { Container, Col, Row } from "react-bootstrap";
 import StackItem from "../components/stackItem";
+import socialImage from "../public/images/social.png";
 
 // Page: About
 //
-// NOTE: Inline SVG:s are not cached by the web browser, so they will be converted to files ASAP.
-// NOTE: My latest client and what I worked with in the description will soon be dynamic.
+// NOTE: Inline SVG:s are not cached by the web browser, so they will be converted to separate files ASAP.
+// NOTE: In the description, 'My latest client' and what I worked with there will soon be dynamic.
 
 const About = () => {
+  const structuredDataPerson = {
+    "@context": "https://schema.org/",
+    "@type": "Person",
+    "name": "Karl Sellergren",
+    "url": "https://seller.green/about",
+    "image": "https://seller.green/_next/image?url=%2Fimages%2Fsocial.png",
+    "sameAs": [
+      "https://www.linkedin.com/in/karlsellergren",
+      "https://www.github.com/sakerhetspolisen",
+      "https://seller.green"
+    ],
+    "jobTitle": "Freelancing web developer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Sellergren"
+    }  
+  }
+
   return (
     <Layout footerSpice>
       <Head>
         <title>About / Karl Sellergren.</title>
-        <meta name="description" content="I am a front-end developer based in Helsingborg,
-              Sweden. See my stack and previous work experience."></meta>
+        <meta name="keywords" content="front-end, frontend, front-end developer, frontend developer, nextjs, helsingborg, next.js, svensk webbutvecklare, webbutvecklare, react utvecklare"/>
+        <meta name="title" content="About / Karl Sellergren"/>
+        <meta name="description" content="Karl Sellergren's competence and stack. Take a look at work history and read a short introduction."/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://seller.green/"/>
+        <meta property="og:title" content="About / Karl Sellergren"/>
+        <meta property="og:description" content="Karl Sellergren's competence and stack. Take a look at work history and read a short introduction."/>
+        <meta property="og:image" content={'https://seller.green' + socialImage}/>
+        <meta property="twitter:card" content="summary_large_image"/>
+        <meta property="twitter:url" content="https://seller.green/"/>
+        <meta property="twitter:title" content="About / Karl Sellergren"/>
+        <meta property="twitter:description" content="Karl Sellergren's competence and stack. Take a look at work history and read a short introduction."/>
+        <meta property="twitter:image" content={'https://seller.green' + socialImage}/>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredDataPerson) }}
+        />
       </Head>
       <Container className="pt-xl-5 pl-xl-5 pt-5 pl-4 pr-4">
         <Row className="pt-5">

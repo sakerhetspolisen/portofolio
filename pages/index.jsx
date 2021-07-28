@@ -18,7 +18,7 @@ const Home = () => {
     "@type": "Person",
     "name": "Karl Sellergren",
     "url": "https://seller.green",
-    "image": "https://seller.green/_next/image?url=%2Fimages%2Fsocial.png",
+    "image": 'https://seller.green' + socialImage,
     "sameAs": [
       "https://www.linkedin.com/in/karlsellergren",
       "https://www.github.com/sakerhetspolisen"
@@ -57,12 +57,12 @@ const Home = () => {
         <meta property="og:url" content="https://seller.green/"/>
         <meta property="og:title" content="Karl Sellergren : Leveling up your internet presence."/>
         <meta property="og:description" content="I am a front-end developer based in Helsingborg, Sweden. I work with companies, agencies and individuals all over the world, creating beautiful things."/>
-        <meta property="og:image" content={socialImage}/>
+        <meta property="og:image" content={'https://seller.green' + socialImage}/>
         <meta property="twitter:card" content="summary_large_image"/>
         <meta property="twitter:url" content="https://seller.green/"/>
         <meta property="twitter:title" content="Karl Sellergren : Leveling up your internet presence."/>
         <meta property="twitter:description" content="I am a front-end developer based in Helsingborg, Sweden. I work with companies, agencies and individuals all over the world, creating beautiful things."/>
-        <meta property="twitter:image" content={socialImage}/>
+        <meta property="twitter:image" content={'https://seller.green' + socialImage}/>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredDataPerson) }}
