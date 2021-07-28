@@ -89,7 +89,6 @@ const Footer = ({ darkHeaderClass, shouldHaveColor }) => {
                       }}
                     >
                       <Image
-                        priority
                         src="/images/pixelpizza.png"
                         width="50"
                         height="50"
