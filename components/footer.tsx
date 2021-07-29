@@ -1,7 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap";
 import React, { useLayoutEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { faDoorClosed } from "@fortawesome/free-solid-svg-icons";
 
 // Component: Footer
 // Used on all pages, reacts to scroll position
@@ -10,13 +9,18 @@ import { faDoorClosed } from "@fortawesome/free-solid-svg-icons";
 // - darkHeaderClass: string **If the current page has a dark header, this class will be added to the header**
 // - shouldHaveColor: boolean **If the background should change color**
 
-const Footer = ({ darkHeaderClass, shouldHaveColor }) => {
-  const footerRef = useRef(null);
+type Props = {
+  darkHeaderClass: string,
+  shouldHaveColor?: boolean,
+};
+
+const Footer = ({ darkHeaderClass, shouldHaveColor }: Props) => {
+  const footerRef = useRef<HTMLDivElement>(null);
   useLayoutEffect(() => {
-    const footerBottom = document.body.scrollHeight;
-    let isDark = false;
+    const footerBottom: number = document.body.scrollHeight;
+    let isDark: boolean = false;
     const onScroll = () => {
-      const scrollPos = window.scrollY + window.innerHeight;
+      const scrollPos: number = window.scrollY + window.innerHeight;
       if (scrollPos > footerBottom - 200) {
         // Footer scrolled to
         document.body.style.background = shouldHaveColor ? "#5433ff" : "#000d36";
@@ -65,7 +69,7 @@ const Footer = ({ darkHeaderClass, shouldHaveColor }) => {
                   style={{
                     color: "white",
                     fontSize: 60,
-                    marginLeft: 30,
+                    marginLeft: "2vw",
                     lineHeight: "1",
                   }}
                 >
@@ -97,7 +101,7 @@ const Footer = ({ darkHeaderClass, shouldHaveColor }) => {
                     </div>
                   </span>
                 </h2>
-                <p style={{ color: "white", marginLeft: 30 }}>
+                <p style={{ color: "white", marginLeft: "2vw" }}>
                   <b>Currently in:</b> Helsingborg, Sweden
                 </p>
               </div>
@@ -109,7 +113,7 @@ const Footer = ({ darkHeaderClass, shouldHaveColor }) => {
               }}
             >
               <div
-                style={{ marginRight: 30, marginLeft: 25, padding: "20px 0" }}
+                style={{ marginRight: 30, marginLeft: "2vw", padding: "20px 0" }}
               >
                 <h3 style={{ color: "white", fontSize: 22.5 }}>Get in touch</h3>
                 <a
@@ -145,7 +149,7 @@ const Footer = ({ darkHeaderClass, shouldHaveColor }) => {
               </div>
             </Col>
           </Row>
-          <Row style={{ justifyContent: "space-between", margin: "30px 10px" }}>
+          <Row style={{ justifyContent: "space-between", margin: "30px 0" }}>
             <Col md={"auto"}>
               <p
                 style={{

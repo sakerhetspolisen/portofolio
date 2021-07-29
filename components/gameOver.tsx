@@ -3,7 +3,7 @@ import React from "react";
 // Component: GameOver
 // Shows after user dies in Snake-Game
 
-const GameOver = (props) => {
+const GameOver = (props?: any) => {
   return (
     <div
       id="GameBoard"

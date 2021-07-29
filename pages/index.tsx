@@ -6,29 +6,11 @@ import Event from "../components/event";
 import EventWithImages from "../components/eventWithImages";
 import SnakeGame from "../components/snakeGame";
 import { useState } from "react";
-import socialImage from "../public/images/social.png";
 
 // Page: Home
 
 const Home = () => {
   const [gameHasStarted, setGameHasStarted] = useState(false);
-
-  const structuredDataPerson = {
-    "@context": "https://schema.org/",
-    "@type": "Person",
-    "name": "Karl Sellergren",
-    "url": "https://seller.green",
-    "image": 'https://seller.green' + socialImage,
-    "sameAs": [
-      "https://www.linkedin.com/in/karlsellergren",
-      "https://www.github.com/sakerhetspolisen"
-    ],
-    "jobTitle": "Freelancing web developer",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Sellergren"
-    }  
-  }
 
   const structuredDataBreadcrumbs = {
     "@context": "https://schema.org/", 
@@ -53,20 +35,12 @@ const Home = () => {
         <meta name="keywords" content="front-end, frontend, front-end developer, frontend developer, helsingborg, webbutvecklare"/>
         <meta name="title" content="Karl Sellergren : Leveling up your internet presence."/>
         <meta name="description" content="I am a front-end developer based in Helsingborg, Sweden. I work with companies, agencies and individuals all over the world, creating beautiful things."/>
-        <meta property="og:type" content="website"/>
         <meta property="og:url" content="https://seller.green/"/>
         <meta property="og:title" content="Karl Sellergren : Leveling up your internet presence."/>
         <meta property="og:description" content="I am a front-end developer based in Helsingborg, Sweden. I work with companies, agencies and individuals all over the world, creating beautiful things."/>
-        <meta property="og:image" content={'https://seller.green' + socialImage}/>
-        <meta property="twitter:card" content="summary_large_image"/>
         <meta property="twitter:url" content="https://seller.green/"/>
         <meta property="twitter:title" content="Karl Sellergren : Leveling up your internet presence."/>
         <meta property="twitter:description" content="I am a front-end developer based in Helsingborg, Sweden. I work with companies, agencies and individuals all over the world, creating beautiful things."/>
-        <meta property="twitter:image" content={'https://seller.green' + socialImage}/>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredDataPerson) }}
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredDataBreadcrumbs) }}
@@ -74,7 +48,7 @@ const Home = () => {
       </Head>
       <SnakeGame gameHasStartedState={setGameHasStarted} />
       <HeroBanner gameHasStarted={gameHasStarted} />
-      <YearBanner year={200021}>
+      <YearBanner year="200021">
         <EventWithImages
           title="Founded my sole propriotorship"
           month="May"
@@ -85,16 +59,16 @@ const Home = () => {
           title="Started working as a part-time Python teacher at Procivitas."
           summary="Giving me the ability to teach teens one year older than me how to code in my favourite general-purpose programming language."
           month="April"
-          width="7"
-          displacement="3"
+          width={7}
+          displacement={3}
         />
       </YearBanner>
-      <YearBanner year={200020}>
+      <YearBanner year="200020">
         <Event
           title="Became board-member of Digital Ungdom."
           month="November"
           summary="Digital Ungdom is a non-profit youth association with the aim of developing and maintaining young people's interest in and knowledge of digital technology and computer science in Sweden and how this can be used."
-          width="6"
+          width={6}
           url="https://www.digitalungdom.se"
           linkText="Take a look at our website"
         />
@@ -102,8 +76,8 @@ const Home = () => {
           title="Developed questionnaires at the Environment department of Helsingborg"
           month="June-July"
           summary="The Environmental Department of Helsingborg is one of the nations most successful in developing a sustainable city climate and goals, also participating in competitions against cities like Paris and Amsterdam. I was honored to develop a sample questionnaire intended to collect feedback from our citizens together with my colleague Katja."
-          width="7"
-          displacement="3"
+          width={7}
+          displacement={3}
         />
         <EventWithImages
           title="2nd place in Fixa Krisen"
@@ -115,11 +89,11 @@ const Home = () => {
           title="6th place in Hack the Crisis"
           month="April"
           summary='"Give a Bag, Get a Test" also won 6th place in the nationwide, state-organized competition Hack The Crisis. Over 5000 participants took part in the competition, and our category had over 120 teams that competed against us. We landed at 6th place and were the only team containing solely of High school students in our category.'
-          width="5"
-          displacement="-4"
+          width={5}
+          displacement={-4}
         />
       </YearBanner>
-      <YearBanner year={200019}>
+      <YearBanner year="200019">
         <EventWithImages
           title="Co-founded Partikular"
           month="December"
@@ -129,7 +103,7 @@ const Home = () => {
           url="https://www.partikular.se"
         />
       </YearBanner>
-      <YearBanner year={200018}>
+      <YearBanner year="200018">
         <EventWithImages
           title="Started freelancing in frontend development"
           month="December"
@@ -140,11 +114,11 @@ const Home = () => {
           title="Started at Procivitas"
           month="August"
           summary="I spent the whole year preparing for my studies at Procivitas high school STEM programme. During the first two years I gained an understanding of Classical and Modern Physics, Mathematics on a higher level, algorithm design and programming in Python."
-          width="6"
-          displacement="1"
+          width={6}
+          displacement={1}
         />
       </YearBanner>
-      <YearBanner year={200017}>
+      <YearBanner year="200017">
         <EventWithImages
           title="Founded Återsälj"
           month="April"

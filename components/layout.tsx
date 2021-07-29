@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "../styles/layout.module.css";
 import Link from "next/link";
-import Footer from "./footer.jsx";
+import Footer from "./footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // Component: Layout
@@ -13,7 +13,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // - dark: boolean **Whether the header should be dark**
 // - footerSpice: boolean **Whether the footer should change color**
 
-const Layout = ({ children, home, dark, footerSpice }) => {
+type Props = {
+  children?: React.ReactNode,
+  home?: boolean,
+  dark?: boolean,
+  footerSpice?: boolean
+};
+
+const Layout = ({ children, home, dark, footerSpice }: Props) => {
   return (
     <div className={styles.container}>
       <header

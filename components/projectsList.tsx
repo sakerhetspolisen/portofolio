@@ -1,4 +1,4 @@
-import { gql, useQuery } from "@apollo/client";
+import { gql, QueryResult, useQuery } from "@apollo/client";
 import { Col, Row } from "react-bootstrap";
 import styles from "../styles/projectsList.module.css";
 import ReactReveal from "react-reveal/Fade";
@@ -26,7 +26,7 @@ export default function ProjectsList() {
 
   if (error)
     return <div><p style={{textAlign: "center"}}>&#128559; Whoops! There was an error loading my projects.</p></div>;
-  if (loading) return <div><p style={{textAlign: "center"}}>&#128336; Loading...</p></div>;
+  if (loading) return <div><p style={{textAlign: "center"}}>&#128336; Please wait as I'm loading the recent projects...</p></div>;
 
   const { projects: allProjects } = data;
 

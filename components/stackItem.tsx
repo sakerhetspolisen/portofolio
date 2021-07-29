@@ -11,7 +11,16 @@ import { Row, Col } from "react-bootstrap";
 // - children: React element **What should be inside the item**
 // - style: object **Custom CSS**
 
-const StackItem = ({ title, desc, margin, height, children, style }) => {
+type Props = {
+  title: string,
+  desc?: string,
+  margin?: number,
+  height?: number,
+  children?: React.ReactNode,
+  style?: object
+};
+
+const StackItem = ({ title, desc, margin, height, children, style }: Props) => {
   //Bad way to hide the logos on mobile
   return (
     <Row

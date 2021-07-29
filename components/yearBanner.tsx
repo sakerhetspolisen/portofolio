@@ -9,7 +9,12 @@ import React, { useLayoutEffect, useRef, useState } from "react";
 // - year: The year to display
 // - children: The content to display under the year-text
 
-const YearBanner = ({ year, children }) => {
+type Props = {
+  year: string,
+  children: React.ReactNode
+};
+
+const YearBanner = ({ year, children }: Props) => {
   const [show, doShow] = useState({
     yearBanner: false,
   });

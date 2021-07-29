@@ -2,7 +2,6 @@ import Head from "next/head";
 import Layout from "../components/layout";
 import { Container, Col, Row } from "react-bootstrap";
 import StackItem from "../components/stackItem";
-import socialImage from "../public/images/social.png";
 
 // Page: About
 //
@@ -10,23 +9,6 @@ import socialImage from "../public/images/social.png";
 // NOTE: In the description, 'My latest client' and what I worked with there will soon be dynamic.
 
 const About = () => {
-  const structuredDataPerson = {
-    "@context": "https://schema.org/",
-    "@type": "Person",
-    "name": "Karl Sellergren",
-    "url": "https://seller.green/about",
-    "image": "https://seller.green/_next/image?url=%2Fimages%2Fsocial.png",
-    "sameAs": [
-      "https://www.linkedin.com/in/karlsellergren",
-      "https://www.github.com/sakerhetspolisen",
-      "https://seller.green"
-    ],
-    "jobTitle": "Freelancing web developer",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Sellergren"
-    }  
-  }
 
   return (
     <Layout footerSpice>
@@ -35,20 +17,12 @@ const About = () => {
         <meta name="keywords" content="front-end, frontend, front-end developer, frontend developer, nextjs, helsingborg, next.js, svensk webbutvecklare, webbutvecklare, react utvecklare"/>
         <meta name="title" content="About / Karl Sellergren"/>
         <meta name="description" content="Karl Sellergren's competence and stack. Take a look at work history and read a short introduction."/>
-        <meta property="og:type" content="website"/>
-        <meta property="og:url" content="https://seller.green/"/>
+        <meta property="og:url" content="https://seller.green/about"/>
         <meta property="og:title" content="About / Karl Sellergren"/>
         <meta property="og:description" content="Karl Sellergren's competence and stack. Take a look at work history and read a short introduction."/>
-        <meta property="og:image" content={'https://seller.green' + socialImage}/>
-        <meta property="twitter:card" content="summary_large_image"/>
-        <meta property="twitter:url" content="https://seller.green/"/>
+        <meta property="twitter:url" content="https://seller.green/about"/>
         <meta property="twitter:title" content="About / Karl Sellergren"/>
         <meta property="twitter:description" content="Karl Sellergren's competence and stack. Take a look at work history and read a short introduction."/>
-        <meta property="twitter:image" content={'https://seller.green' + socialImage}/>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredDataPerson) }}
-        />
       </Head>
       <Container className="pt-xl-5 pl-xl-5 pt-5 pl-4 pr-4">
         <Row className="pt-5">
@@ -77,7 +51,7 @@ const About = () => {
                 className="mb-4 mt-3"
               ></hr>
               <Container className="pl-0 pr-0">
-                <StackItem title="React" desc="Web development" margin="0">
+                <StackItem title="React" desc="Web development" margin={0}>
                   <svg
                     viewBox="-11.5 -10.23174 23 20.46348"
                     style={{ height: 24, margin: "0 auto", display: "block" }}
@@ -92,7 +66,7 @@ const About = () => {
                     </g>{" "}
                   </svg>
                 </StackItem>
-                <StackItem title="CSS3" desc="Web design" margin="0">
+                <StackItem title="CSS3" desc="Web design" margin={0}>
                   <svg
                     viewBox="0 0 256 361"
                     preserveAspectRatio="xMidYMid"
@@ -140,7 +114,7 @@ const About = () => {
                     </g>{" "}
                   </svg>
                 </StackItem>
-                <StackItem title="Python" desc="General-purpose" margin="0">
+                <StackItem title="Python" desc="General-purpose" margin={0}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     style={{ height: 24, margin: "0 auto", display: "block" }}
@@ -165,7 +139,7 @@ const About = () => {
                     />{" "}
                   </svg>
                 </StackItem>
-                <StackItem title="Apollo" desc="GraphQL REST API:s" margin="0">
+                <StackItem title="Apollo" desc="GraphQL REST API:s" margin={0}>
                   <svg
                     viewBox="0 0 816 240"
                     style={{
@@ -182,7 +156,7 @@ const About = () => {
                 <StackItem
                   title="Next.JS"
                   desc="SEO-friendly React"
-                  margin="0"
+                  margin={0}
                 >
                   <svg
                     viewBox="0 0 148 90"
@@ -204,12 +178,11 @@ const About = () => {
                 <StackItem
                   title="Wordpress"
                   desc="Content MS"
-                  margin="0"
+                  margin={0}
                 >
                   <svg
                     viewBox="0 0 1258.2 200"
                     style={{
-                      enableBackground: "new 0 0 1258.2 200",
                       height: 22,
                       margin: "0 auto",
                       display: "block",
@@ -228,7 +201,7 @@ const About = () => {
                           {" "}
                           <use style={{ overflow: "visible" }} />{" "}
                         </clipPath>{" "}
-                        <g class="st0">
+                        <g className="st0">
                           {" "}
                           <g>
                             {" "}
@@ -296,7 +269,7 @@ const About = () => {
                     </g>{" "}
                   </svg>
                 </StackItem>
-                <StackItem title="Kotlin" desc="Android development" margin="0">
+                <StackItem title="Kotlin" desc="Android development" margin={0}>
                   <svg
                     viewBox="0 0 100 24"
                     style={{ height: 19, margin: "0 auto", display: "block" }}
@@ -329,7 +302,7 @@ const About = () => {
               </Container>
             </div>
             <div>
-              <h2 style={{ fontWeight: "300" }} className="pt-4">
+              <h2 style={{ fontWeight: 300 }} className="pt-4">
                 Curriculum
               </h2>
               <hr
@@ -340,7 +313,7 @@ const About = () => {
                 <StackItem
                   title="2021-"
                   desc="Reach out!"
-                  margin="0"
+                  margin={0}
                   height={25}
                   style={{
                     backgroundColor: "#5433ff",
@@ -355,7 +328,7 @@ const About = () => {
                 <StackItem
                   title="2021-"
                   desc="Frontend developer"
-                  margin="0"
+                  margin={0}
                   height={25}
                 >
                   Self employed
@@ -363,7 +336,7 @@ const About = () => {
                 <StackItem
                   title="2020-"
                   desc="Board member"
-                  margin="0"
+                  margin={0}
                   height={25}
                 >
                   Digital Ungdom
@@ -371,7 +344,7 @@ const About = () => {
                 <StackItem
                   title="2021"
                   desc="Python teacher"
-                  margin="0"
+                  margin={0}
                   height={25}
                 >
                   Procivitas Gymnasium
@@ -379,7 +352,7 @@ const About = () => {
                 <StackItem
                   title="2019-2021"
                   desc="Chief Technology Officer"
-                  margin="0"
+                  margin={0}
                   height={25}
                 >
                   Intrigia (Partikular)
@@ -387,7 +360,7 @@ const About = () => {
               </Container>
             </div>
             <div>
-              <h2 style={{ fontWeight: "300" }} className="pt-5">
+              <h2 style={{ fontWeight: 300 }} className="pt-5">
                 Competence
               </h2>
               <hr

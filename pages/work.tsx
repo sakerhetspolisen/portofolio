@@ -4,31 +4,12 @@ import Layout from "../components/layout";
 import styles from "../styles/work.module.css";
 import { Col, Container, Row } from "react-bootstrap";
 import ProjectsList from "../components/projectsList";
-import socialImage from "../public/images/social.png";
 
 
 // Page: Work
 
 const Work = () => {
   const gradientRef = useRef(null);
-
-  const structuredDataPerson = {
-    "@context": "https://schema.org/",
-    "@type": "Person",
-    "name": "Karl Sellergren",
-    "url": "https://seller.green/work",
-    "image": "https://seller.green" + socialImage,
-    "sameAs": [
-      "https://www.linkedin.com/in/karlsellergren",
-      "https://www.github.com/sakerhetspolisen",
-      "https://seller.green"
-    ],
-    "jobTitle": "Freelancing web developer",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "Sellergren"
-    }  
-  }
 
   useEffect(() => {
     const canvas = gradientRef.current;
@@ -77,20 +58,12 @@ const Work = () => {
         <meta name="keywords" content="front-end, frontend, front-end developer, frontend developer, work, helsingborg"/>
         <meta name="title" content="Work / Karl Sellergren"/>
         <meta name="description" content="My recent projects are made for agencies, magazines, schools and individuals. See a list of all my recent projects."/>
-        <meta property="og:type" content="website"/>
-        <meta property="og:url" content="https://seller.green/"/>
+        <meta property="og:url" content="https://seller.green/work"/>
         <meta property="og:title" content="Work / Karl Sellergren"/>
         <meta property="og:description" content="My recent projects are made for agencies, magazines, schools and individuals. See a list of all my recent projects."/>
-        <meta property="og:image" content={'https://seller.green' + socialImage}/>
-        <meta property="twitter:card" content="summary_large_image"/>
-        <meta property="twitter:url" content="https://seller.green/"/>
+        <meta property="twitter:url" content="https://seller.green/work"/>
         <meta property="twitter:title" content="Work / Karl Sellergren"/>
         <meta property="twitter:description" content="My recent projects are made for agencies, magazines, schools and individuals. See a list of all my recent projects."/>
-        <meta property="twitter:image" content={'https://seller.green' + socialImage}/>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredDataPerson) }}
-        />
       </Head>
       <Container className={styles.container}>
         <canvas width="2" height="2" ref={gradientRef}></canvas>
