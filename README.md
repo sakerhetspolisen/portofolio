@@ -11,6 +11,7 @@
   <li><b>Next.JS🪄</b> - React framework</li>
   <li><b>Apollo Server🚀</b> - Effective configuration of a GraphQL server</li>
   <li>GraphQL</li>
+  <li>TypeScript</li>
   <li>CSS Modules</li>
   <li>Prettier</li>
   <li>Bootstrap 5</li>
