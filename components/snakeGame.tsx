@@ -1,37 +1,53 @@
 import React from "react";
 import styles from "../styles/snakeGame.module.css";
-import GameOver from "./gameOver.jsx";
+import GameOver from "./gameOver";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faKeyboard } from "@fortawesome/free-solid-svg-icons";
 
 // Component: SnakeGame
 // Game that can be played on home page. Uses the HTML canvas element.
 
-class SnakeGame extends React.Component {
-  constructor(props) {
-    super(props);
+type MyProps = {
+  gameHasStartedState: Function,
+};
 
-    this.handleKeyDown = this.handleKeyDown.bind(this);
+type MyState = {
+  width: number,
+  height: number,
+  appleHeight: number,
+  blockWidth: number,
+  blockHeight: number,
+  gameLoopTimeout: number,
+  timeoutId: number,
+  startSnakeSize: number,
+  snake: Array<{ Xpos: number, Ypos: number }>,
+  apple: { Xpos: number, Ypos: number },
+  direction: string,
+  directionChanged: boolean,
+  isGameOver: boolean,
+  score: number;
+};
 
-    this.state = {
-      width: 0,
-      height: 0,
-      appleheight: 0,
-      blockWidth: 0,
-      blockHeight: 0,
-      gameLoopTimeout: 70,
-      timeoutId: 0,
-      startSnakeSize: 0,
-      snake: [],
-      apple: {},
-      direction: "right",
-      directionChanged: false,
-      isGameOver: false,
-      score: 0,
-    };
-  }
+class SnakeGame extends React.Component<MyProps, MyState> {
+  state: MyState = {
+    width: 0,
+    height: 0,
+    appleHeight: 0,
+    blockWidth: 0,
+    blockHeight: 0,
+    gameLoopTimeout: 70,
+    timeoutId: 0,
+    startSnakeSize: 0,
+    snake: [],
+    apple: { Xpos: null, Ypos: null },
+    direction: "right",
+    directionChanged: false,
+    isGameOver: false,
+    score: 0
+  };
 
   componentDidMount() {
+    this.handleKeyDown = this.handleKeyDown.bind(this);
     this.initGame();
     window.addEventListener("keydown", this.handleKeyDown);
     this.gameLoop();
@@ -39,18 +55,18 @@ class SnakeGame extends React.Component {
 
   initGame() {
     // Game size initialization
-    let width = Math.floor(window.innerWidth / 20) * 20;
-    let height = Math.floor(window.innerHeight / 20) * 20;
-    let appleheight = Math.floor(((window.innerHeight / 100) * 90) / 20) * 20;
-    let blockWidth = 20;
-    let blockHeight = 20;
+    let width: number = Math.floor(window.innerWidth / 20) * 20;
+    let height: number = Math.floor(window.innerHeight / 20) * 20;
+    let appleHeight: number = Math.floor(((window.innerHeight / 100) * 90) / 20) * 20;
+    let blockWidth: number = 20;
+    let blockHeight:number = 20;
 
     // snake initialization
-    let startSnakeSize = 6;
-    let snake = [];
-    let Xpos = width / 2;
-    let Ypos = height / 2;
-    let snakeHead = { Xpos: width / 2, Ypos: height / 2 };
+    let startSnakeSize:number = 6;
+    let snake: Array<any> = [];
+    let Xpos: number = width / 2;
+    let Ypos: number = height / 2;
+    let snakeHead = { Xpos: Xpos, Ypos: Ypos };
     snake.push(snakeHead);
     for (let i = 1; i < startSnakeSize; i++) {
       Xpos -= blockWidth;
@@ -59,24 +75,24 @@ class SnakeGame extends React.Component {
     }
 
     // apple position initialization
-    let appleXpos =
+    let appleXpos: number =
       Math.floor(Math.random() * ((width - blockWidth) / blockWidth + 1)) *
       blockWidth;
-    let appleYpos =
+    let appleYpos: number =
       Math.floor(
-        Math.random() * ((appleheight - blockHeight) / blockHeight + 1)
+        Math.random() * ((appleHeight - blockHeight) / blockHeight + 1)
       ) * blockHeight;
     while (appleYpos === snake[0].Ypos) {
       appleYpos =
         Math.floor(
-          Math.random() * ((appleheight - blockHeight) / blockHeight + 1)
+          Math.random() * ((appleHeight - blockHeight) / blockHeight + 1)
         ) * blockHeight;
     }
 
     this.setState({
       width,
       height,
-      appleheight,
+      appleHeight,
       blockWidth,
       blockHeight,
       startSnakeSize,
@@ -86,7 +102,7 @@ class SnakeGame extends React.Component {
   }
 
   gameLoop() {
-    let timeoutId = setTimeout(() => {
+    let timeoutId = window.setTimeout(() => {
       if (!this.state.isGameOver) {
         this.moveSnake();
         this.tryToEatSnake();
@@ -106,18 +122,18 @@ class SnakeGame extends React.Component {
   }
 
   resetGame() {
-    let width = this.state.width;
-    let height = this.state.height;
-    let appleheight = this.state.appleheight;
-    let blockWidth = this.state.blockWidth;
-    let blockHeight = this.state.blockHeight;
-    let apple = this.state.apple;
+    let width: number = this.state.width;
+    let height:number = this.state.height;
+    let appleheight:number = this.state.appleHeight;
+    let blockWidth:number = this.state.blockWidth;
+    let blockHeight:number = this.state.blockHeight;
+    let apple:{Xpos: number, Ypos: number} = this.state.apple;
 
     // snake reset
-    let snake = [];
-    let Xpos = width / 2;
-    let Ypos = height / 2;
-    let snakeHead = { Xpos: width / 2, Ypos: height / 2 };
+    let snake: Array<{Xpos: number, Ypos: number}> = [];
+    let Xpos: number = width / 2;
+    let Ypos: number = height / 2;
+    let snakeHead: {Xpos: number, Ypos: number} = { Xpos: width / 2, Ypos: height / 2 };
     snake.push(snakeHead);
     for (let i = 1; i < this.state.startSnakeSize; i++) {
       Xpos -= blockWidth;
@@ -155,11 +171,11 @@ class SnakeGame extends React.Component {
   }
 
   moveSnake() {
-    let snake = this.state.snake;
-    let previousPartX = this.state.snake[0].Xpos;
-    let previousPartY = this.state.snake[0].Ypos;
-    let tmpPartX = previousPartX;
-    let tmpPartY = previousPartY;
+    let snake: Array<{Xpos: number, Ypos: number}> = this.state.snake;
+    let previousPartX: number = this.state.snake[0].Xpos;
+    let previousPartY: number = this.state.snake[0].Ypos;
+    let tmpPartX: number = previousPartX;
+    let tmpPartY: number = previousPartY;
     this.moveHead();
     for (let i = 1; i < snake.length; i++) {
       tmpPartX = snake[i].Xpos;
@@ -180,11 +196,11 @@ class SnakeGame extends React.Component {
     if (snake[0].Xpos === apple.Xpos && snake[0].Ypos === apple.Ypos) {
       let width = this.state.width;
       let height = this.state.height;
-      let appleheight = this.state.appleheight;
+      let appleheight = this.state.appleHeight;
       let blockWidth = this.state.blockWidth;
       let blockHeight = this.state.blockHeight;
       let newTail = { Xpos: apple.Xpos, Ypos: apple.Ypos };
-      let gameLoopTimeout = this.state.gameLoopTimeout;
+      let gameLoopTimeout: number = this.state.gameLoopTimeout;
 
       // increase snake size
       snake.push(newTail);

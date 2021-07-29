@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Image from "next/image";
-import styles from "react-responsive-carousel/lib/styles/carousel.min.css";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
 // Component: AssetCarousel
@@ -10,8 +10,12 @@ import { Carousel } from "react-responsive-carousel";
 // - imagesAndVideosSrcList: Array of image and video urls.
 // - imageClass: CSS class for the image container.
 
-const AssetCarousel = ({ imagesAndVideosSrcList, imageClass }) => {
-  return (
+type Props = {
+  imagesAndVideosSrcList: Array<string>,
+  imageClass: string
+};
+
+const AssetCarousel = ({ imagesAndVideosSrcList, imageClass }: Props) => (
     <Carousel
       autoPlay
       showArrows={false}
@@ -27,7 +31,6 @@ const AssetCarousel = ({ imagesAndVideosSrcList, imageClass }) => {
         );
       })}
     </Carousel>
-  );
-};
+);
 
 export default AssetCarousel;

@@ -10,7 +10,11 @@ import { faArrowCircleDown } from "@fortawesome/free-solid-svg-icons";
 // Props:
 // - gameHasStarted: boolean **If the snake game has started**
 
-const HomeHero = ({ gameHasStarted }) => {
+type Props = {
+  gameHasStarted: boolean
+};
+
+const HomeHero = ({ gameHasStarted }: Props) => {
   const [show, doShow] = useState({
     homeBanner: false,
   });
@@ -18,15 +22,14 @@ const HomeHero = ({ gameHasStarted }) => {
     homeBanner: 0,
   });
   useLayoutEffect(() => {
-    const homeBanPos = window.innerHeight;
-    const homeBanHeight = window.innerHeight;
+    const homeBanPos: number = window.innerHeight;
+    const homeBanHeight: number = window.innerHeight;
     const onScroll = () => {
-      const scrollPos = window.scrollY + window.innerHeight;
+      const scrollPos: number = window.scrollY + window.innerHeight;
       if (homeBanPos < scrollPos) {
         // Element scrolled to
         doShow((state) => ({ ...state, homeBanner: true }));
-        let homeBannerPercent =
-          ((scrollPos - homeBanPos) * 100) / homeBanHeight;
+        let homeBannerPercent: number = ((scrollPos - homeBanPos) * 100) / homeBanHeight;
         if (homeBannerPercent > 100) homeBannerPercent = 100;
         if (homeBannerPercent < 0) homeBannerPercent = 0;
         setPercentShow((prevState) => ({
