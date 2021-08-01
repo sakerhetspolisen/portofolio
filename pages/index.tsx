@@ -57,7 +57,7 @@ const Home = () => {
         />
         <Event
           title="Started working as a part-time Python teacher at Procivitas."
-          summary="Giving me the ability to teach teens one year older than me how to code in my favourite general-purpose programming language."
+          summary="The school entrusted me to educate existing students in Prog1 in Python and get them to finish the course with an approved grade. The majority of students went out with the highest grade."
           month="April"
           width={7}
           displacement={3}
