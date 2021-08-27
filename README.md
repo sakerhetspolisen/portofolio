@@ -41,4 +41,4 @@ Send me an email at [karl@seller.green](mailto:karl@seller.green), or check out 
 <br/><br/>
 
 ## License
-This repository is licensed under the [GNU Affero General Public License v3.0](https://github.com/sakerhetspolisen/portofolio/blob/main/LICENSE).
+This repository is licensed under the [GNU Affero General Public License v3.0](https://github.com/sakerhetspolisen/portofolio/blob/master/LICENSE).
