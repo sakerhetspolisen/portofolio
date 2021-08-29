@@ -1,7 +1,10 @@
-import { gql, QueryResult, useQuery } from "@apollo/client";
+// Third party
+import { gql, useQuery } from "@apollo/client";
 import { Col, Row } from "react-bootstrap";
-import styles from "../styles/projectsList.module.css";
 import ReactReveal from "react-reveal/Fade";
+
+// Custom
+import styles from "./projectsList.module.css";
 import ProjectCarousel from "./projectCarousel";
 
 // Component: ProjectsList

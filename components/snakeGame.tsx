@@ -1,8 +1,11 @@
+// Third party
 import React from "react";
-import styles from "../styles/snakeGame.module.css";
-import GameOver from "./gameOver";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faKeyboard } from "@fortawesome/free-solid-svg-icons";
+
+// Custom
+import styles from "./snakeGame.module.css";
+import GameOver from "./gameOver";
 
 // Component: SnakeGame
 // Game that can be played on home page. Uses the HTML canvas element.

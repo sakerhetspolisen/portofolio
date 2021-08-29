@@ -1,6 +1,9 @@
+// Third party
 import Head from "next/head";
-import Layout from "../components/layout";
 import { Container, Col, Row } from "react-bootstrap";
+
+// Custom
+import Layout from "../components/layout";
 import StackItem from "../components/stackItem";
 
 // Page: About

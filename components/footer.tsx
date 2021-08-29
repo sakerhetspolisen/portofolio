@@ -1,5 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
-import React, { useLayoutEffect, useRef, useState } from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import Image from "next/image";
 
 // Component: Footer

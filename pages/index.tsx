@@ -1,11 +1,14 @@
+// Third party
 import Head from "next/head";
+import { useState } from "react";
+
+// Custom
 import Layout from "../components/layout";
 import HeroBanner from "../components/homeBanner";
 import YearBanner from "../components/yearBanner";
 import Event from "../components/event";
 import EventWithImages from "../components/eventWithImages";
 import SnakeGame from "../components/snakeGame";
-import { useState } from "react";
 
 // Page: Home
 

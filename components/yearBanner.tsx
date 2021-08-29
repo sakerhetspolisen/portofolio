@@ -1,6 +1,9 @@
+// Third party
 import { Container, Row } from "react-bootstrap";
-import styles from "../styles/yearBanner.module.css";
 import React, { useLayoutEffect, useRef, useState } from "react";
+
+// Custom
+import styles from "./yearBanner.module.css";
 
 // Component: YearBanner
 // Used on home page for displaying banners for years.

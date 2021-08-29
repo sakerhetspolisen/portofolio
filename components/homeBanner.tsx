@@ -1,8 +1,11 @@
+// Third party
 import { Container, Row, Col } from "react-bootstrap";
-import styles from "../styles/homeBanner.module.css";
 import React, { useLayoutEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowCircleDown } from "@fortawesome/free-solid-svg-icons";
+
+// Custom
+import styles from "./homeBanner.module.css";
 
 // Component: HomeHero
 // Shown behind the Snake-Game on home-page. Reacts on scroll.

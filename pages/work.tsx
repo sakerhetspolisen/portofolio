@@ -1,8 +1,11 @@
+// Third party
 import Head from "next/head";
 import React, { useRef, useEffect } from "react";
+import { Col, Container, Row } from "react-bootstrap";
+
+// Custom
 import Layout from "../components/layout";
 import styles from "../styles/work.module.css";
-import { Col, Container, Row } from "react-bootstrap";
 import ProjectsList from "../components/projectsList";
 
 

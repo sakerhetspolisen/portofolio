@@ -1,9 +1,12 @@
+// Third party
 import { Col, Row } from "react-bootstrap";
-import styles from "../styles/event.module.css";
-import utilStyles from "../styles/utils.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import ReactReveal from "react-reveal/Fade";
+
+// Custom
+import styles from "./event.module.css";
+import utilStyles from "../styles/utils.module.css";
 
 // Component: Event
 // Used on home page for events that don't have images

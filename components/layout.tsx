@@ -1,8 +1,10 @@
+// Third party
 import Image from "next/image";
-import styles from "../styles/layout.module.css";
 import Link from "next/link";
+
+// Custom
+import styles from "./layout.module.css";
 import Footer from "./footer";
-import "bootstrap/dist/css/bootstrap.min.css";
 
 // Component: Layout
 // This component structures the page. Contains the header and links to the main content.

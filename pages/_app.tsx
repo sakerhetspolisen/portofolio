@@ -1,11 +1,14 @@
+// Third party
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "@fortawesome/fontawesome-svg-core/styles.css";
-import type { AppProps /*, AppContext */ } from 'next/app'
-import "../styles/global.css";
+import type { AppProps /*, AppContext */ } from 'next/app';
 import Head from "next/head";
 import { ApolloProvider } from "@apollo/client";
 import { useApollo } from "../lib/apolloClient";
 import { config } from "@fortawesome/fontawesome-svg-core";
+
+// Custom
+import "../styles/global.css";
 import socialImage from "../public/images/socialImage.png";
 
 config.autoAddCss = false;

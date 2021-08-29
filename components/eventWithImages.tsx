@@ -1,10 +1,13 @@
+// Third party
 import { Col, Row } from "react-bootstrap";
-import styles from "../styles//eventWithImages.module.css";
-import utilStyles from "../styles/utils.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 import ReactReveal from "react-reveal/Fade";
+
+// Custom
+import styles from "./eventWithImages.module.css";
+import utilStyles from "../styles/utils.module.css";
 
 
 // Component: EventWithImages
