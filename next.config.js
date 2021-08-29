@@ -4,6 +4,8 @@ module.exports = withOptimizedImages({
   /* config for next-optimized-images */
   images: {
     domains: ['res.cloudinary.com'],
+    // next-optimized-images handles image optimization automatically
+    disableStaticImages: true,
   },
   i18n: {
     // These are all the locales you want to support in
