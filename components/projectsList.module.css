@@ -5,7 +5,7 @@
   position: relative;
   margin: 0;
   padding: 0;
-  margin-top: 100px;
+  margin-top: 70px;
   margin-left: 60px;
   font-family: 'Subjectivity', Arial, Helvetica, sans-serif;
   font-display: swap;
@@ -16,7 +16,7 @@
   overflow: hidden;
   width: calc(100% - 120px);
   margin-left: 60px;
-  margin-top: 40px;
+  margin-top: 70px;
 }
 .waveWrapper {
   /* Clip edges, as some of the lines don't terminate nicely. */

@@ -1,6 +1,6 @@
 // Third party
 import { gql, useQuery } from "@apollo/client";
-import { Col, Row } from "react-bootstrap";
+import { Container, Col, Row } from "react-bootstrap";
 import ReactReveal from "react-reveal/Fade";
 
 // Custom
@@ -34,7 +34,7 @@ export default function ProjectsList() {
   const { projects: allProjects } = data;
 
   return allProjects.map((project) => (
-    <>
+    <Container key={project.title.toLowerCase().replace(" ","-")}>
       <Row className={styles.project}>
         <Col xl={6} md={6}>
           <div className={styles.upper}>
@@ -73,6 +73,6 @@ export default function ProjectsList() {
           <div className={`${styles.wave} ${styles.wave2}`}></div>
         </div>
       </div>
-    </>
+    </Container>
   ));
 }
