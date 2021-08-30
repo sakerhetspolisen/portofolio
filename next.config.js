@@ -1,10 +1,6 @@
-const withOptimizedImages = require('next-optimized-images');
- 
-module.exports = withOptimizedImages({
-  /* config for next-optimized-images */
+module.exports = {
   images: {
     domains: ['res.cloudinary.com'],
-    disableStaticImages: true,
   },
   i18n: {
     // These are all the locales you want to support in
@@ -14,4 +10,4 @@ module.exports = withOptimizedImages({
     // a non-locale prefixed path e.g. `/hello`
     defaultLocale: 'en-US',
   },
-});
+};
