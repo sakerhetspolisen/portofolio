@@ -102,7 +102,7 @@ const Footer = ({ darkHeaderClass, shouldHaveColor }: Props) => {
                   </span>
                 </h2>
                 <p style={{ color: "white", marginLeft: "2vw" }}>
-                  <b>Currently in:</b> Helsingborg, Sweden
+                  <b>Currently in:</b> Stockholm, Sweden
                 </p>
               </div>
             </Col>
@@ -133,18 +133,10 @@ const Footer = ({ darkHeaderClass, shouldHaveColor }: Props) => {
                   Github
                 </a>
                 <a
-                  href="https://www.upwork.com/freelancers/~01fb5d8636e09c5330"
-                  target="_blank"
-                  rel="noopener"
+                  href="mailto:karlsellergren@protonmail.com"
                   style={{ color: "white", display: "block", margin: "7px 0" }}
                 >
-                  Upwork
-                </a>
-                <a
-                  href="mailto:karl@seller.green"
-                  style={{ color: "white", display: "block", margin: "7px 0" }}
-                >
-                  karl@seller.green
+                  karlsellergren@protonmail.com
                 </a>
               </div>
             </Col>
