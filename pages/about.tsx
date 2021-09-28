@@ -31,19 +31,13 @@ const About = () => {
         <Row className="pt-5">
           <Col lg={5} className="pl-xl-5 pr-xl-5 pt-xl-5 pt-5">
             <p style={{ fontSize: 30, lineHeight: 1.2, fontWeight: 300 }}>
-              Ciao! I am a freelancing front-end developer based in Helsingborg,
-              Sweden. I work with companies, agencies, startups and individuals
-              all over the world, creating beautiful things. My latest client
-              was <u>SCCO.Studio</u> where I worked as a{" "}
-              <u>frontend developer</u>. I publish the majority of the source
+              Ciao! I'm a dedicated frontend developer with a passion for creating
+              beautiful and functional user interfaces. I have 3+ years of professional work experince in the field, and I'm always looking for new challenges. Currently studying Engineering Physics at the Royal Institute of Technology in Stockholm, Sweden. During my studies I work on smaller projects, where the latest one was with <u>SCCO.Studio</u> where I worked as a <u>frontend developer</u>. I publish some of the source
               code I write on Github as open-source projects, please check them
               out in my <a href="https://www.github.com/sakerhetspolisen" target="_blank" rel="noopener" style={{color: "white", textDecoration: "underline"}}>profile</a>.
             </p>
             <p style={{ fontSize: 30, lineHeight: 1.2, fontWeight: 300 }}>
-              Before working as a freelancing developer I was the Chief
-              Technical Officer at Swedens biggest STEM magazine called
-              Partikular. Amongst other things, I was the lead developer for
-              their <a href="https://www.partikular.se" target="_blank" rel="noopener" style={{color: "white", textDecoration: "underline"}}>website</a>.
+              Before working as a freelancing developer, I co-founded Partikular and later worked as the Lead Web developer for various of their projects. Partikular later merged with Intrigia, where I continued working as the Lead Web developer. Read more about Partikular on their <a href="https://www.partikular.se" target="_blank" rel="noopener" style={{color: "white", textDecoration: "underline"}}>website</a>.
             </p>
           </Col>
           <Col lg={7} className="pt-3 pl-xl-5 pr-xl-5 pt-lg-0">
@@ -303,6 +297,21 @@ const About = () => {
                   </svg>
                 </StackItem>
               </Container>
+              <span style={{fontSize: 15, fontWeight: 300}}>In addition to <b>Material UI, Typescript, jQuery, Firebase, MongoDB, Bootstrap, Git and Figma</b></span>
+            </div>
+            <div>
+              <h2 style={{ fontWeight: 300 }} className="pt-5">
+                Competence
+              </h2>
+              <hr
+                style={{ background: "white", borderWidth: 2 }}
+                className="mb-4 mt-3"
+              ></hr>
+              <div>
+                <img style={{margin: 4, display: "inline-block"}} src="https://github-readme-stats.vercel.app/api?username=sakerhetspolisen&hide_border=true&hide=stars&show_icons=true&theme=midnight-purple&count_private=true"></img>
+                <img style={{margin: 4, display: "inline-block"}} src="https://github-readme-stats.vercel.app/api/top-langs/?username=sakerhetspolisen&hide_border=true&exclude_repo=Misuri,MisuriSpeed&theme=midnight-purple&layout=compact"></img>
+              </div>
+              <h3 style={{fontSize: "0.7em", textAlign: "center", fontWeight: "normal", margin: "10px 0"}}>Github stats powered by <a href="https://github.com/anuraghazra/github-readme-stats">github-readme-stats</a></h3>
             </div>
             <div>
               <h2 style={{ fontWeight: 300 }} className="pt-4">
@@ -354,370 +363,13 @@ const About = () => {
                 </StackItem>
                 <StackItem
                   title="2019-2021"
-                  desc="Chief Technology Officer"
+                  desc="Lead Web developer"
                   margin={0}
                   height={25}
                 >
                   Intrigia (Partikular)
                 </StackItem>
               </Container>
-            </div>
-            <div>
-              <h2 style={{ fontWeight: 300 }} className="pt-5">
-                Competence
-              </h2>
-              <hr
-                style={{ background: "white", borderWidth: 2 }}
-                className="mb-4 mt-3"
-              ></hr>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  fontSize: 15,
-                }}
-              >
-                <div
-                  style={{
-                    display: "flex",
-                    flexWrap: "nowrap",
-                    alignItems: "center",
-                  }}
-                >
-                  <svg
-                    style={{ height: 50, marginLeft: -12 }}
-                    x="0px"
-                    y="0px"
-                    viewBox="0 0 64 64"
-                    enableBackground="new 0 0 64 64"
-                  >
-                    <g>
-                      <g>
-                        <g>
-                          <polygon
-                            fill="#FFC533"
-                            points="47,11 47,17 45,17 39,17 25,17 19,17 17,17 17,11 "
-                          />
-                        </g>
-                      </g>
-                      <g>
-                        <g>
-                          <polygon
-                            fill="#20bdff"
-                            points="45,17 45,29 39,35 39,17 "
-                          />
-                        </g>
-                      </g>
-                      <g>
-                        <g>
-                          <rect
-                            x="25"
-                            y="17"
-                            fill="#5433ff"
-                            width="14"
-                            height="18"
-                          />
-                        </g>
-                      </g>
-                      <g>
-                        <g>
-                          <polygon
-                            fill="#20bdff"
-                            points="25,35 19,29 19,17 25,17 "
-                          />
-                        </g>
-                      </g>
-                      <g>
-                        <g>
-                          <path
-                            fill="#FFC533"
-                            d="M40,33c-0.3-0.3-0.7-0.6-1.1-0.9c-2-1.4-4.3-2.2-6.9-2.2s-4.9,0.8-6.9,2.2c-0.4,0.3-0.8,0.6-1.1,0.9c-2.5,2.2-4,5.4-4,9c0,6.6,5.4,12,12,12s12-5.4,12-12C44,38.4,42.4,35.2,40,33z"
-                          />
-                        </g>
-                      </g>
-                      <g>
-                        <g>
-                          <path
-                            fill="#F2AC0F"
-                            d="M40.7,39.5c-0.1-0.3-0.2-0.7-0.3-1c-0.5-1.1-1.1-2.1-2-3c-0.1-0.1-0.1-0.1-0.2-0.2C36.5,33.9,34.4,33,32,33c-5,0-9,4-9,9s4,9,9,9c4.2,0,7.8-2.9,8.7-6.8c0.1-0.5,0.2-0.9,0.2-1.4c0-0.3,0-0.5,0-0.8C41,41.1,40.9,40.3,40.7,39.5z"
-                          />
-                        </g>
-                      </g>
-                      <g>
-                        <g>
-                          <g>
-                            <path
-                              fill="#FCEA81"
-                              d="M38.9,41c-0.2-1.4-0.8-2.6-1.6-3.6C36,35.9,34.1,35,32,35c-3.9,0-7,3.1-7,7s3.1,7,7,7s7-3.1,7-7C39,41.7,39,41.3,38.9,41z"
-                            />
-                          </g>
-                        </g>
-                      </g>
-                      <g>
-                        <g>
-                          <polygon
-                            fill="#F2AC0F"
-                            points="36.4,40.7 34.2,43 34.7,46.3 32,44.7 29.3,46.3 29.8,43 27.6,40.7 30.6,40.2 32,37.2 33.4,40.2 "
-                          />
-                        </g>
-                      </g>
-                      <g>
-                        <g>
-                          <path
-                            fill="#FFFFFF"
-                            d="M41.2,45.3L41.2,45.3c-0.1-0.9-0.8-1.7-1.7-1.7v0c0.9,0,1.7-0.7,1.7-1.7h0.1c0,0.9,0.7,1.7,1.7,1.7v0C42,43.7,41.2,44.4,41.2,45.3z"
-                          />
-                        </g>
-                      </g>
-                      <g>
-                        <g>
-                          <path
-                            fill="#FFFFFF"
-                            d="M38.1,35h0.1c0,2.3,1.8,4.1,4.1,4.1l0,0c-2.3,0-4.1,1.8-4.1,4.1h-0.1c0-2.3-1.9-4.1-4.1-4.1l0,0C36.3,39.1,38.1,37.3,38.1,35z"
-                          />
-                        </g>
-                      </g>
-                    </g>
-                  </svg>
-                  <span>Linkedin Javascript assessment</span>
-                </div>
-                <span style={{ fontWeight: 300, textAlign: "right" }}>
-                  Top 5% of 1.1M participants
-                </span>
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  fontSize: 15,
-                }}
-              >
-                <div
-                  style={{
-                    display: "flex",
-                    flexWrap: "nowrap",
-                    alignItems: "center",
-                  }}
-                >
-                  <svg
-                    style={{ height: 50, marginLeft: -12 }}
-                    x="0px"
-                    y="0px"
-                    viewBox="0 0 64 64"
-                    enableBackground="new 0 0 64 64"
-                  >
-                    <g>
-                      <g>
-                        <g>
-                          <polygon
-                            fill="#FFC533"
-                            points="47,11 47,17 45,17 39,17 25,17 19,17 17,17 17,11 "
-                          />
-                        </g>
-                      </g>
-                      <g>
-                        <g>
-                          <polygon
-                            fill="#20bdff"
-                            points="45,17 45,29 39,35 39,17 "
-                          />
-                        </g>
-                      </g>
-                      <g>
-                        <g>
-                          <rect
-                            x="25"
-                            y="17"
-                            fill="#5433ff"
-                            width="14"
-                            height="18"
-                          />
-                        </g>
-                      </g>
-                      <g>
-                        <g>
-                          <polygon
-                            fill="#20bdff"
-                            points="25,35 19,29 19,17 25,17 "
-                          />
-                        </g>
-                      </g>
-                      <g>
-                        <g>
-                          <path
-                            fill="#FFC533"
-                            d="M40,33c-0.3-0.3-0.7-0.6-1.1-0.9c-2-1.4-4.3-2.2-6.9-2.2s-4.9,0.8-6.9,2.2c-0.4,0.3-0.8,0.6-1.1,0.9c-2.5,2.2-4,5.4-4,9c0,6.6,5.4,12,12,12s12-5.4,12-12C44,38.4,42.4,35.2,40,33z"
-                          />
-                        </g>
-                      </g>
-                      <g>
-                        <g>
-                          <path
-                            fill="#F2AC0F"
-                            d="M40.7,39.5c-0.1-0.3-0.2-0.7-0.3-1c-0.5-1.1-1.1-2.1-2-3c-0.1-0.1-0.1-0.1-0.2-0.2C36.5,33.9,34.4,33,32,33c-5,0-9,4-9,9s4,9,9,9c4.2,0,7.8-2.9,8.7-6.8c0.1-0.5,0.2-0.9,0.2-1.4c0-0.3,0-0.5,0-0.8C41,41.1,40.9,40.3,40.7,39.5z"
-                          />
-                        </g>
-                      </g>
-                      <g>
-                        <g>
-                          <g>
-                            <path
-                              fill="#FCEA81"
-                              d="M38.9,41c-0.2-1.4-0.8-2.6-1.6-3.6C36,35.9,34.1,35,32,35c-3.9,0-7,3.1-7,7s3.1,7,7,7s7-3.1,7-7C39,41.7,39,41.3,38.9,41z"
-                            />
-                          </g>
-                        </g>
-                      </g>
-                      <g>
-                        <g>
-                          <polygon
-                            fill="#F2AC0F"
-                            points="36.4,40.7 34.2,43 34.7,46.3 32,44.7 29.3,46.3 29.8,43 27.6,40.7 30.6,40.2 32,37.2 33.4,40.2 "
-                          />
-                        </g>
-                      </g>
-                      <g>
-                        <g>
-                          <path
-                            fill="#FFFFFF"
-                            d="M41.2,45.3L41.2,45.3c-0.1-0.9-0.8-1.7-1.7-1.7v0c0.9,0,1.7-0.7,1.7-1.7h0.1c0,0.9,0.7,1.7,1.7,1.7v0C42,43.7,41.2,44.4,41.2,45.3z"
-                          />
-                        </g>
-                      </g>
-                      <g>
-                        <g>
-                          <path
-                            fill="#FFFFFF"
-                            d="M38.1,35h0.1c0,2.3,1.8,4.1,4.1,4.1l0,0c-2.3,0-4.1,1.8-4.1,4.1h-0.1c0-2.3-1.9-4.1-4.1-4.1l0,0C36.3,39.1,38.1,37.3,38.1,35z"
-                          />
-                        </g>
-                      </g>
-                    </g>
-                  </svg>
-                  <span>Linkedin CSS assessment</span>
-                </div>
-                <span style={{ fontWeight: 300, textAlign: "right" }}>
-                  Top 5% of 961K participants
-                </span>
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  fontSize: 15,
-                }}
-              >
-                <div
-                  style={{
-                    display: "flex",
-                    flexWrap: "nowrap",
-                    alignItems: "center",
-                  }}
-                >
-                  <svg
-                    style={{ height: 50, marginLeft: -12 }}
-                    x="0px"
-                    y="0px"
-                    viewBox="0 0 64 64"
-                    enableBackground="new 0 0 64 64"
-                  >
-                    <g>
-                      <g>
-                        <g>
-                          <polygon
-                            fill="#FFC533"
-                            points="47,11 47,17 45,17 39,17 25,17 19,17 17,17 17,11 "
-                          />
-                        </g>
-                      </g>
-                      <g>
-                        <g>
-                          <polygon
-                            fill="#20bdff"
-                            points="45,17 45,29 39,35 39,17 "
-                          />
-                        </g>
-                      </g>
-                      <g>
-                        <g>
-                          <rect
-                            x="25"
-                            y="17"
-                            fill="#5433ff"
-                            width="14"
-                            height="18"
-                          />
-                        </g>
-                      </g>
-                      <g>
-                        <g>
-                          <polygon
-                            fill="#20bdff"
-                            points="25,35 19,29 19,17 25,17 "
-                          />
-                        </g>
-                      </g>
-                      <g>
-                        <g>
-                          <path
-                            fill="#FFC533"
-                            d="M40,33c-0.3-0.3-0.7-0.6-1.1-0.9c-2-1.4-4.3-2.2-6.9-2.2s-4.9,0.8-6.9,2.2c-0.4,0.3-0.8,0.6-1.1,0.9c-2.5,2.2-4,5.4-4,9c0,6.6,5.4,12,12,12s12-5.4,12-12C44,38.4,42.4,35.2,40,33z"
-                          />
-                        </g>
-                      </g>
-                      <g>
-                        <g>
-                          <path
-                            fill="#F2AC0F"
-                            d="M40.7,39.5c-0.1-0.3-0.2-0.7-0.3-1c-0.5-1.1-1.1-2.1-2-3c-0.1-0.1-0.1-0.1-0.2-0.2C36.5,33.9,34.4,33,32,33c-5,0-9,4-9,9s4,9,9,9c4.2,0,7.8-2.9,8.7-6.8c0.1-0.5,0.2-0.9,0.2-1.4c0-0.3,0-0.5,0-0.8C41,41.1,40.9,40.3,40.7,39.5z"
-                          />
-                        </g>
-                      </g>
-                      <g>
-                        <g>
-                          <g>
-                            <path
-                              fill="#FCEA81"
-                              d="M38.9,41c-0.2-1.4-0.8-2.6-1.6-3.6C36,35.9,34.1,35,32,35c-3.9,0-7,3.1-7,7s3.1,7,7,7s7-3.1,7-7C39,41.7,39,41.3,38.9,41z"
-                            />
-                          </g>
-                        </g>
-                      </g>
-                      <g>
-                        <g>
-                          <polygon
-                            fill="#F2AC0F"
-                            points="36.4,40.7 34.2,43 34.7,46.3 32,44.7 29.3,46.3 29.8,43 27.6,40.7 30.6,40.2 32,37.2 33.4,40.2 "
-                          />
-                        </g>
-                      </g>
-                      <g>
-                        <g>
-                          <path
-                            fill="#FFFFFF"
-                            d="M41.2,45.3L41.2,45.3c-0.1-0.9-0.8-1.7-1.7-1.7v0c0.9,0,1.7-0.7,1.7-1.7h0.1c0,0.9,0.7,1.7,1.7,1.7v0C42,43.7,41.2,44.4,41.2,45.3z"
-                          />
-                        </g>
-                      </g>
-                      <g>
-                        <g>
-                          <path
-                            fill="#FFFFFF"
-                            d="M38.1,35h0.1c0,2.3,1.8,4.1,4.1,4.1l0,0c-2.3,0-4.1,1.8-4.1,4.1h-0.1c0-2.3-1.9-4.1-4.1-4.1l0,0C36.3,39.1,38.1,37.3,38.1,35z"
-                          />
-                        </g>
-                      </g>
-                    </g>
-                  </svg>
-                  <span>Linkedin Python assessment</span>
-                </div>
-                <span style={{ fontWeight: 300, textAlign: "right" }}>
-                  Top 30% of 1.7M participants
-                </span>
-              </div>
             </div>
           </Col>
         </Row>
