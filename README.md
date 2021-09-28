@@ -1,11 +1,8 @@
-<div align="center" style="border-radius: 3px; border: 3px solid yellow;background: red">
-  <span><b>Notice:</b></span> The project has temporarily been moved from seller.green to <a href="https://portofolio-sakerhetspolisen.vercel.app">portofolio-sakerhetspolisen.vercel.app</a>!
-</div>
 <div align="center">
 <img src="https://raw.githubusercontent.com/sakerhetspolisen/portofolio/master/thumbnail.svg">
   <h1>My portfolio website for 2021.</h1>
   <p>Have you tried the snake-game? 🐍 My high-score is higher than yours :)</p>
-  <p><b>Take a look for yourself at <strike>seller.green</strike> <a href="https://portofolio-sakerhetspolisen.vercel.app">portofolio-sakerhetspolisen.vercel.app</a>✨</b></p>
+  <p><b>Take a look for yourself at <a href="https://karlsellergren.se">karlsellergren.se</a>✨</b></p>
   <br/>
 </div>
 
