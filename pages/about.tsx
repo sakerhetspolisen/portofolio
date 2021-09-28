@@ -308,10 +308,10 @@ const About = () => {
                 className="mb-4 mt-3"
               ></hr>
               <div>
-                <img style={{margin: 4, display: "inline-block"}} src="https://github-readme-stats.vercel.app/api?username=sakerhetspolisen&hide_border=true&hide=stars&show_icons=true&theme=midnight-purple&count_private=true"></img>
-                <img style={{margin: 4, display: "inline-block"}} src="https://github-readme-stats.vercel.app/api/top-langs/?username=sakerhetspolisen&hide_border=true&exclude_repo=Misuri,MisuriSpeed&theme=midnight-purple&layout=compact"></img>
+                <img style={{margin: 4, display: "inline-block"}} src="https://github-readme-stats.vercel.app/api?username=sakerhetspolisen&hide_border=true&hide=stars&show_icons=true&theme=midnight-purple&count_private=true" alt="Github statistics"></img>
+                <img style={{margin: 4, display: "inline-block"}} src="https://github-readme-stats.vercel.app/api/top-langs/?username=sakerhetspolisen&hide_border=true&exclude_repo=Misuri,MisuriSpeed&theme=midnight-purple&layout=compact" alt="Most used languages"></img>
               </div>
-              <h3 style={{fontSize: "0.7em", textAlign: "center", fontWeight: "normal", margin: "10px 0"}}>Github stats powered by <a href="https://github.com/anuraghazra/github-readme-stats">github-readme-stats</a></h3>
+              <h3 style={{fontSize: "0.7em", textAlign: "center", fontWeight: "normal", margin: "10px 0"}}>Github stats powered by <a href="https://github.com/anuraghazra/github-readme-stats" rel="nofollow">github-readme-stats</a></h3>
             </div>
             <div>
               <h2 style={{ fontWeight: 300 }} className="pt-4">
