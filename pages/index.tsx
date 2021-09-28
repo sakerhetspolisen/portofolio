@@ -52,18 +52,30 @@ const Home = () => {
       <SnakeGame gameHasStartedState={setGameHasStarted} />
       <HeroBanner gameHasStarted={gameHasStarted} />
       <YearBanner year="200021">
+        <Event
+          title="Started studying Engineering Science at KTH"
+          month="August"
+          summary="Engineering Science at KTH is currently the highest ranked master's degree program in Sweden. I'm attending the program and am currently studying Python-programming, calculus and thermodynamics."
+          width={6}
+          displacement={5}
+        />
         <EventWithImages
           title="Founded my sole propriotorship"
           month="May"
-          summary='Having developed websites for small projects a while it was a no-brainer for me to start a real business and connect with bigger clients. I freelance in web development and web consultation and have over 4 years of experience.'
+          summary='Having developed websites for small projects a while it was a no-brainer for me to start a real business and connect with bigger clients. I freelance in web development and web consultation and have over 3 years of experience.'
           images={["youngLaundry.png", "sakerhetsKontrollen.png"]}
         />
         <Event
-          title="Started working as a part-time Python teacher at Procivitas."
-          summary="The school entrusted me to educate existing students in Prog1 in Python and get them to finish the course with an approved grade. The majority of students went out with the highest grade."
-          month="April"
+          title="Worked as a Python teacher at Procivitas."
+          summary="The school entrusted me to educate existing students in PROG1 in Python and get them to finish the course with an approved grade. The majority of students went out with the highest grade."
+          month="April - June"
           width={7}
           displacement={3}
+        />
+        <Event
+          title="When Partikular merged with Intrigia, I continued working as Lead Web developer"
+          month="March-April"
+          width={6}
         />
       </YearBanner>
       <YearBanner year="200020">
@@ -114,7 +126,7 @@ const Home = () => {
           images={["revenuir.png", "sccoStudio.png", "botAttack.png"]}
         />
         <Event
-          title="Started at Procivitas"
+          title="Started studying at Procivitas"
           month="August"
           summary="I spent the whole year preparing for my studies at Procivitas high school STEM programme. During the first two years I gained an understanding of Classical and Modern Physics, Mathematics on a higher level, algorithm design and programming in Python."
           width={6}
