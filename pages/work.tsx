@@ -1,13 +1,29 @@
 // Third party
 import Head from "next/head";
+import { GetStaticProps } from 'next'
 import React, { useRef, useEffect } from "react";
 import { Col, Container, Row } from "react-bootstrap";
+import { gql } from "@apollo/client";
+import { initializeApollo, addApolloState } from '../lib/apolloClient'
 
 // Custom
 import Layout from "../components/layout";
 import styles from "../styles/work.module.css";
 import ProjectsList from "../components/projectsList";
 
+export const ALL_PROJECTS_QUERY = gql`
+  query allProjects {
+    projects {
+      title
+      year
+      summary
+      role
+      thumbnailUrl
+      referrerUrl
+      videoUrl
+    }
+  }
+`;
 
 // Page: Work
 
@@ -61,10 +77,10 @@ const Work = () => {
         <meta name="keywords" content="front-end, frontend, front-end developer, frontend developer, work, helsingborg"/>
         <meta name="title" content="Work / Karl Sellergren"/>
         <meta name="description" content="My recent projects are made for agencies, magazines, schools and individuals. See a list of all my recent projects."/>
-        <meta property="og:url" content="https://seller.green/work"/>
+        <meta property="og:url" content="https://karlsellergren.se/work"/>
         <meta property="og:title" content="Work / Karl Sellergren"/>
         <meta property="og:description" content="My recent projects are made for agencies, magazines, schools and individuals. See a list of all my recent projects."/>
-        <meta property="twitter:url" content="https://seller.green/work"/>
+        <meta property="twitter:url" content="https://karlsellergren.se/work"/>
         <meta property="twitter:title" content="Work / Karl Sellergren"/>
         <meta property="twitter:description" content="My recent projects are made for agencies, magazines, schools and individuals. See a list of all my recent projects."/>
       </Head>
@@ -81,10 +97,24 @@ const Work = () => {
         </Row>
       </Container>
       <Container style={{ marginTop: 50, padding: 0 }}>
-        <ProjectsList />
+        <ProjectsList/>
       </Container>
     </Layout>
   );
 };
+
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const apolloClient = initializeApollo()
+
+  await apolloClient.query({
+    query: ALL_PROJECTS_QUERY
+  })
+
+  return addApolloState(apolloClient, {
+    props: {},
+    revalidate: 1,
+  })
+}
 
 export default Work;
