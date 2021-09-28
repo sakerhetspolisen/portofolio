@@ -22,12 +22,12 @@ const Home = () => {
       "@type": "ListItem", 
       "position": 1, 
       "name": "Work",
-      "item": "https://seller.green/work"  
+      "item": "https://karlsellergren.se/work"  
     },{
       "@type": "ListItem", 
       "position": 2, 
       "name": "About",
-      "item": "https://seller.green/about"  
+      "item": "https://karlsellergren.se/about"  
     }]
   }
 
@@ -38,10 +38,10 @@ const Home = () => {
         <meta name="keywords" content="front-end, frontend, front-end developer, frontend developer, helsingborg, webbutvecklare"/>
         <meta name="title" content="Karl Sellergren : Leveling up your internet presence."/>
         <meta name="description" content="I am a front-end developer based in Helsingborg, Sweden. I work with companies, agencies and individuals all over the world, creating beautiful things."/>
-        <meta property="og:url" content="https://seller.green/"/>
+        <meta property="og:url" content="https://karlsellergren.se/"/>
         <meta property="og:title" content="Karl Sellergren : Leveling up your internet presence."/>
         <meta property="og:description" content="I am a front-end developer based in Helsingborg, Sweden. I work with companies, agencies and individuals all over the world, creating beautiful things."/>
-        <meta property="twitter:url" content="https://seller.green/"/>
+        <meta property="twitter:url" content="https://karlsellergren.se/"/>
         <meta property="twitter:title" content="Karl Sellergren : Leveling up your internet presence."/>
         <meta property="twitter:description" content="I am a front-end developer based in Helsingborg, Sweden. I work with companies, agencies and individuals all over the world, creating beautiful things."/>
         <script

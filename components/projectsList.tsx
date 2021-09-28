@@ -32,8 +32,11 @@ export default function ProjectsList() {
   if (loading) return <div><p style={{textAlign: "center"}}>&#128336; Please wait as I'm loading the recent projects...</p></div>;
 
   const { projects: allProjects } = data;
-
-  return allProjects.map((project) => (
+  var proj = JSON.parse( JSON.stringify( allProjects ) );
+  var ordered = proj.sort(function(a, b){
+    return b.year - a.year;
+  })
+  return ordered.map((project) => (
     <Container key={project.title.toLowerCase().replace(" ","-")}>
       <Row className={styles.project}>
         <Col xl={6} md={6}>

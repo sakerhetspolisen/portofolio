@@ -20,10 +20,10 @@ const About = () => {
         <meta name="keywords" content="front-end, frontend, front-end developer, frontend developer, nextjs, helsingborg, next.js, svensk webbutvecklare, webbutvecklare, react utvecklare"/>
         <meta name="title" content="About / Karl Sellergren"/>
         <meta name="description" content="Karl Sellergren's competence and stack. Take a look at work history and read a short introduction."/>
-        <meta property="og:url" content="https://seller.green/about"/>
+        <meta property="og:url" content="https://karlsellergren.se/about"/>
         <meta property="og:title" content="About / Karl Sellergren"/>
         <meta property="og:description" content="Karl Sellergren's competence and stack. Take a look at work history and read a short introduction."/>
-        <meta property="twitter:url" content="https://seller.green/about"/>
+        <meta property="twitter:url" content="https://karlsellergren.se/about"/>
         <meta property="twitter:title" content="About / Karl Sellergren"/>
         <meta property="twitter:description" content="Karl Sellergren's competence and stack. Take a look at work history and read a short introduction."/>
       </Head>

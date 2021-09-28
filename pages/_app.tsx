@@ -14,17 +14,18 @@ import socialImage from "../public/images/socialImage.png";
 config.autoAddCss = false;
 
 export default function App({ Component, pageProps }: AppProps) {
-  const apolloClient = useApollo(pageProps.initialApolloState);
+  const apolloClient = useApollo(pageProps)
   const structuredDataPerson: Object = {
     "@context": "https://schema.org/",
     "@type": "Person",
     "name": "Karl Sellergren",
-    "url": "https://seller.green/about",
-    "image": "https://seller.green/_next/image?url=%2Fimages%2Fsocial.png",
+    "url": "https://karlsellergren.se/about",
+    "image": "https://karlsellergren.se/_next/image?url=%2Fimages%2Fsocial.png",
     "sameAs": [
       "https://www.linkedin.com/in/karlsellergren",
       "https://www.github.com/sakerhetspolisen",
-      "https://seller.green"
+      "https://karlsellergren.se",
+      "https://www.karlsellergren.se"
     ],
     "jobTitle": "Freelancing web developer",
     "worksFor": {
@@ -42,8 +43,8 @@ export default function App({ Component, pageProps }: AppProps) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredDataPerson) }}
         />
         <meta property="twitter:card" content="summary_large_image"/>
-        <meta property="twitter:image" content={'https://seller.green' + socialImage}/>
-        <meta property="og:image" content={'https://seller.green' + socialImage}/>
+        <meta property="twitter:image" content={'https://karlsellergren.se' + socialImage}/>
+        <meta property="og:image" content={'https://karlsellergren.se' + socialImage}/>
         <meta property="og:type" content="website"/>
       </Head>
       <div>
